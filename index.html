@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modèles et Hôtesses</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="/asset/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="nav-bar">
+        <div class="logo">
+            <span>🌿</span> <!-- Replace with your logo -->
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Acceuil</a></li>
+                <li><a href="#">À Propos</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Gallerie</a></li>
+                <li><a href="#">Actualités</a></li>
+                <li class="dropdown">
+                    <a href="#">S'inscrire</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/pages/modèle.html">Modèle</a></li>
+                        <li><a href="/pages/modèle.html">Hôtesse</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <button class="contact-btn">Contactez Nous</button>
+        <div class="menu-toggle">
+            <i class="fa-solid fa-bars"></i> <!-- Initial icon -->
+        </div>
+    </div>
+</header>
+<!-- Mobile Menu -->
+<div class="mobile-menu">
+
+    <nav>
+        <ul>
+            <li><a href="/index.html">Acceuil</a></li>
+            <li><a href="#">À Propos</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Gallerie</a></li>
+            <li><a href="#">Actualités</a></li>
+            <li class="dropdown">
+                <a href="#">S'inscrire</a>
+                <ul class="dropdown-menu">
+                    <li><a href="/pages/modèle.html">Modèle</a></li>
+                    <li><a href="/pages/modèle.html">Hôtesse</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <button class="contact-btn">Contactez Nous</button>
+</div>
+
+  
+  <!--------------conntent bellow------------>
+    <section class="hero-section">
+      <div class="hero-content">
+        <h2>Design clé en main</h2>
+            <h1>Modèles et Hôtesses</h1>
+            <p>Notre agence se spécialise dans la fourniture de mannequins et d'hôtesses professionnelles pour tous types d'événements et de promotions. Que ce soit pour des défilés, des salons, ou des événements privés, nous mettons à votre disposition des profils diversifiés, élégants et talentueux. Nos modèles et hôtesses sont soigneusement sélectionnés pour garantir le succès de votre événement et laisser une impression mémorable à vos invités.</p>
+            <button class="order-btn">Réservez un modèle ou une hôtesse</button>
+      </div>
+
+      <div class="image-slider">
+        <img src="/asset/images/1.jpeg" alt="Landscape 1" class="img1">
+        <img src="/asset/images/2 (2).jpeg" alt="Landscape 2" class="img2">
+        <img src="/asset/images/3.jpeg" alt="Landscape 3" class="img3">
+      </div>
+    </section>
+    <section>
+      <div class="inspiration">
+        <h2>Inspiration Derrière Notre Travail</h2>
+        <p>Chez Modèles et Hôtesses, nous croyons en la création d’expériences mémorables et élégantes. Chaque projet est l’occasion de révéler l’excellence.</p>
+        <p>Des événements prestigieux aux simples réceptions, notre équipe passionnée met son savoir-faire au service de votre vision.</p>
+      </div>
+      
+    </section>
+    <footer>
+      <div class="footer-about">
+        <h3>Faites briller vos événements avec nos modèles et hôtesses !</h3>
+        <p>Collaborons ensemble pour donner vie à vos idées dans le domaine du mannequinat et de l’hôtessariat.</p>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 SoftCreatix. Tous droits réservés.</p>
+        <p>Développé par SoftCreatix</p>
+      </div>
+    </footer>
+   <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const toggleIcon = menuToggle.querySelector('i');
+
+        menuToggle.addEventListener('click', () => {
+            // Toggle the mobile menu visibility
+            mobileMenu.classList.toggle('open');
+            
+            // Change the icon between the hamburger and close (X) icon
+            toggleIcon.classList.toggle('fa-bars');
+            toggleIcon.classList.toggle('fa-xmark');
+        });
+    });
+   </script>
+    
+</body>
+</html>
