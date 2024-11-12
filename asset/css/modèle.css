@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Creepster&family=Fredoka:wght@300..700&family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Creepster&family=Fredoka:wght@300..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Pacifico&display=swap');
 
 body, ul{
     margin: 0;
@@ -283,6 +283,7 @@ h1 {
     text-align: center;
     margin-bottom: 20px;
     color: white;
+    font-family: "Pacifico", cursive;
 }
 form {
     display: flex; 
@@ -298,8 +299,8 @@ form {
 }
 .file-upload-section {
     display: grid;
-    gap: 15px;
-    grid-template-columns: repeat(5, 1fr); /* Default: 5 columns */
+    gap: 25px;
+    grid-template-columns: repeat(6, 1fr); /* Default: 5 columns */
     width: 100%;
     margin-top: 30px;
     justify-items: center; /* Center items in each grid cell */

@@ -285,7 +285,6 @@ header .nav-bar {
 
 .gallery-title {
     font-size: 24px;
-    font-weight: bolder;
     color: whitesmoke;
     text-align: center;
     padding-top: 50px;
@@ -293,6 +292,7 @@ header .nav-bar {
     justify-content: center;
     align-items: center;
     position: relative;
+    font-family: "Pacifico", cursive;
 }
 
 .gallery {
@@ -354,7 +354,7 @@ header .nav-bar {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.9);  /* Black background with opacity */
+    background-color: rgba(0, 0, 0, 0.945);  /* Black background with opacity */
     color: white;
     padding: 20px;
     opacity: 0;
@@ -377,7 +377,7 @@ header .nav-bar {
     font-size: 16px; /* Highlight the 'Modèle' */
     font-weight: bold;
     font-family: "Pacifico", cursive;
-    color: rgba(255, 0, 0, 0.589);
+    color: rgba(0, 255, 242, 0.589);
 }
 
 /* Transition for the card on hover */
@@ -398,6 +398,29 @@ header .nav-bar {
         font-size: 20px;
     }
 }
+footer {
+    background-color: rgba(0, 0, 0, 0.952);
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+  }
+  
+  .footer-about h3 {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    color: lightgrey;
+  }
+  
+  .footer-about p {
+    margin: 5px 0;
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid #555;
+    padding-top: 20px;
+    color: lightgrey;
+  }
+/***************************Mediaquery****************************************/
 @media screen and (max-width: 580px) {
     .gallery {
         grid-template-columns: 1fr;
