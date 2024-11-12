@@ -236,6 +236,7 @@ header .nav-bar {
 .dropdown:hover ~ .contact-btn {
     display: none;
 }
+/*************************end of header mobile version and desktop***********************************/
 /**************************order**********************/
 .order-btn {
     padding: 12px 25px;

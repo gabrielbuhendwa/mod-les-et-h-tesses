@@ -32,7 +32,7 @@ header::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.575);
+    background: rgba(0, 0, 0, 0.685);
     z-index: -1;
 }
 header .nav-bar {
@@ -237,212 +237,7 @@ header .nav-bar {
     display: none;
 }
 /*************************end of header mobile version and desktop***********************************/
-/* HERO SECTION */
-.hero-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 65px;
-    padding: 40px 20px; 
-    position: relative; 
-    z-index: 1; 
-}
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); 
-    z-index: -1; 
-}
-/*******************************************/
-.form-container {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-radius: 10px;
-    width: 70%;
-    margin: 0 auto;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
-}
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: white;
-}
-form {
-    display: flex; 
-    flex-wrap: wrap;
-    gap: 30px; /* Adds spacing between columns */
-    justify-content: center;
-}
-.form-grid {
-    display: flex;
-    gap: 10px;
-    width: 100%;/**90**/
-    justify-content: center;
-}
-.file-upload-section {
-    display: grid;
-    gap: 15px;
-    grid-template-columns: repeat(5, 1fr); /* Default: 5 columns */
-    width: 100%;
-    margin-top: 30px;
-    justify-items: center; /* Center items in each grid cell */
-}
-.upload-guide {
-    font-size: 16px; /* Adjust font size */
-    color: white; /* Slightly darker text for clarity */
-    font-weight:bolder;
-    text-align: center; /* Center the sentence */
-    margin-bottom: -40px; /* Space between the guide sentence and the upload section */
-    width: 100%; /* Optional: Set a max width to avoid very long lines */
-    margin-left: auto;
-    margin-right: auto; /* Center horizontally */
-}
-
-.file-upload-item {
-    width: 100%;
-    max-width: 150px;
-    height: 150px; /* Ensures square container */
-    position: relative;
-    display: flex;
-    flex-direction: column; /* Ensure label is placed above the input */
-    align-items: center;
-    justify-content: flex-start; /* Align content to the top */
-    border: 2px dashed lightgray; /* Dashed border for upload visual */
-    border-radius: 5px;
-    overflow: hidden; /* Hide image overflow */
-    cursor: pointer;
-    background-color: #f9f9f92d; /* Light background for contrast */
-}
-.file-upload-item label {
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: rgba(0, 0, 0, 0.726);
-    text-align: center;
-}
-/* File input styling */
-.file-upload-item input[type="file"] {
-    width: 100%;
-    height: 100%;
-    opacity: 0; /* Hide default input */
-    position: absolute; /* Place it over the container */
-    cursor: pointer;
-}
-/* Hide the default "Choose file" text and position the icon */
-.file-upload-item input[type="file"]::-webkit-file-upload-button {
-    display: none;
-}
-.file-upload-item .upload-icon {
-    position: absolute;
-    top: 50%; /* Center the icon */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgba(0, 0, 0, 0.726);
-    font-size: 24px;
-    pointer-events: none; /* Allow clicks to reach the file input */
-}
-
-/*esssai*/
-.file-upload-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the image covers the area */
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; /* Ensure image stays above icon but below new uploads */
-}
-input[type="text"], 
-input[type="email"], 
-input[type="password"], 
-input[type="file"], 
-input[type="tel"], 
-input[type="url"], 
-input[type="date"], 
-select {
-    background-color: #f9f9f9bb; /* Light, semi-transparent background */
-    padding: 10px; /* Adjust padding if needed */
-    border-radius: 5px; /* Keep the border radius consistent with other elements */
-    border: 1px solid #ccc; /* Border color for input fields */
-    outline: none;
-    width: 90%; /* Ensure inputs are full width */
-    margin-bottom: 15px; /* Space between input fields */
-     /* Add space below inputs */
-}
-
-/* File input specific styling */
-.file-upload-section input[type="file"] {
-    opacity: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-}
-.form-group {
-    flex: 1 1 calc(50%); /* Two columns */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-input[type="file"], 
-.submit-btn {
-    flex: 1 1 100%; /* Ensure these elements span full width */
-}
-
-label{
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: white;
-}
-
-input, select{
-   padding: 10px;
-    border-radius: 5px;
-    border: none;
-    width: 95%;
-}
-
-.submit-btn {
-    background-color: rgba(0, 0, 0, 0.952);
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    padding: 15px 30px;
-    width: 100%; /* Full width button */
-    max-width: 300px; /* Optional: Set max width */
-    text-align: center;
-    border: none;
-    border-radius: 5px;
-}
-
-
-.submit-btn:hover {
-    background-color: rgba(0, 0, 0, 0.822);
-}
-.birthdate-fields {
-    display: flex;
-    gap: 10px;
-}
-.submit-container {
-    display: flex;
-    justify-content: center; /* Center the submit button */
-    width: 100%;
-} 
-/*******************mediaquery form************************/
-
-@media (max-width: 768px) {
-    .form-grid {
-        flex-direction: column;
-    }
-}
-/* Contact Button: Adjust position */
+/*******************Contact buttom web******************************/
 .contact-btn {
     padding: 10px 10px;
     border: 1px solid #333;
@@ -453,45 +248,135 @@ input, select{
     z-index: 2;
     border-radius: 5px;
 }
-/***************files upload media query****************/
-@media (max-width: 1024px) {
-    .file-upload-section {
-        grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
-    }
+/******************************************************************Hero section**********************************************************************/
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 1;
 }
 
-@media (max-width: 768px) {
-    .file-upload-section {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
-    }
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.699);
+    z-index: -1;
 }
 
-@media (max-width: 480px) {
-    .file-upload-section {
-        grid-template-columns: repeat(1, 1fr); /* 1 column on very small screens */
-    }
-}
-/*footer*/
-footer {
-    background-color: rgba(0, 0, 0, 0.952);
-    color: white;
-    padding: 15px 20px;
+.gallery-title {
+    font-size: 24px;
+    font-weight: bolder;
+    color: whitesmoke;
     text-align: center;
-  }
-  
-  .footer-about h3 {
-    font-size: 1.25rem;
     margin-bottom: 20px;
-    color: lightgrey;
-  }
-  
-  .footer-about p {
-    margin: 5px 0;
-  }
-  
-  .footer-bottom {
-    border-top: 1px solid #555;
-    padding-top: 20px;
-    color: lightgrey;
-  }
-  
+    position: relative;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+    color: whitesmoke;
+    font-weight: bolder;
+    padding-top: 40px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 7px 4px 10px rgba(0, 0, 0, 0.342);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.card h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.897);
+    padding: 10px;
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card:hover h3 {
+    transform: translateY(100%);
+}
+
+/* Details that will appear after 1 second */
+.card-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+.card:hover .card-details {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Animation and Styling for Card Details */
+.card-details p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 10px 0;
+
+}
+.card-details p:first-child {
+    margin-bottom: 30px; /* Adds extra space below the first <p> */
+    font-size: 16px; /* Highlight the 'Modèle' */
+    font-weight: bold;
+    color: red;
+}
+
+/* Transition for the card on hover */
+.card:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-section {
+        padding: 20px;
+    }
+
+    .gallery-title {
+        font-size: 20px;
+    }
+}
