@@ -153,7 +153,7 @@ header .nav-bar {
 .mobile-menu ul li:nth-child(6) { animation-delay: 0.5s; }
 .mobile-menu ul li:nth-child(7) { animation-delay: 0.6s; }
 
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
     .nav-bar ul{
         display: none;
     }
