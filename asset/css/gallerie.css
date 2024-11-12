@@ -423,13 +423,18 @@ footer {
 /***************************Mediaquery****************************************/
 @media screen and (max-width: 580px) {
     .gallery {
+        display: grid;
         grid-template-columns: 1fr;
+        gap: 50px;
     }
     .gallery-title {
         padding-top: 80px;
     }
 }
 @media screen and (max-width: 400px) {
+    .gallery {
+        gap: 40px;
+    }
     .gallery-title {
         padding-top: 100px; 
     }
