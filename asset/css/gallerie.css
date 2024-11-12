@@ -289,6 +289,10 @@ header .nav-bar {
     color: whitesmoke;
     text-align: center;
     padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .gallery {
@@ -398,5 +402,12 @@ header .nav-bar {
     .gallery {
         grid-template-columns: 1fr;
     }
+    .gallery-title {
+        padding-top: 80px;
+    }
 }
-
+@media screen and (max-width: 400px) {
+    .gallery-title {
+        padding-top: 100px; 
+    }
+}
