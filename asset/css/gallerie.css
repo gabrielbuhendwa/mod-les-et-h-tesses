@@ -276,8 +276,7 @@ header .nav-bar {
     font-weight: bolder;
     color: whitesmoke;
     text-align: center;
-    margin-bottom: 20px;
-    position: relative;
+    padding-top: 40px;
 }
 
 .gallery {
@@ -296,6 +295,7 @@ header .nav-bar {
     box-shadow: 7px 4px 10px rgba(0, 0, 0, 0.342);
     transition: transform 0.3s ease;
     text-align: center;
+    border-radius: 4px;
 }
 
 .card img {
