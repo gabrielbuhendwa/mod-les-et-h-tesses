@@ -43,8 +43,20 @@ header .nav-bar {
     align-items: center;
     width: 100%;
 }
-.logo{
-    font-size: 1.5rem;
+.logo {
+    font-size: 1rem; /* Adjust font size if necessary */
+    display: flex;
+    align-items: center; /* Center the logo vertically */
+    justify-content: center; /* Center the logo horizontally */
+}
+
+/* Image styling */
+.logo img {
+    max-width: 100%; /* Ensures the logo fits within its container */
+    max-height: 50px; /* Set a max height to control the image size */
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px;
 }
 /***********Navbar**************/
 .nav-bar ul{
