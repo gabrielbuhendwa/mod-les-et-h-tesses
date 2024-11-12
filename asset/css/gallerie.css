@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Creepster&family=Fredoka:wght@300..700&family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Creepster&family=Fredoka:wght@300..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Pacifico&display=swap');
+
 
 body, ul{
     margin: 0;
@@ -352,14 +354,13 @@ header .nav-bar {
 /* Animation and Styling for Card Details */
 .card-details p {
     font-size: 14px;
-    line-height: 1.6;
     margin: 10px 0;
-
 }
 .card-details p:first-child {
-    margin-bottom: 30px; /* Adds extra space below the first <p> */
+ /* Adds extra space below the first <p> */
     font-size: 16px; /* Highlight the 'Modèle' */
     font-weight: bold;
+    font-family: "Pacifico", cursive;
     color: red;
 }
 
