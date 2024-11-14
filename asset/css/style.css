@@ -538,15 +538,20 @@ footer {
     }
     
 }
-@media screen and (max-width: 321px){
+@media screen and (max-width: 346px){
     .hero-section {
-        height: 200vh;
+        height: 180vh;
     }
     .image-slider {
         width: 35%;
         margin-top: 15px;
     }
     
+}
+@media screen and (max-width: 300px){
+    .hero-section {
+        height: 200vh;
+    } 
 }
 
   
