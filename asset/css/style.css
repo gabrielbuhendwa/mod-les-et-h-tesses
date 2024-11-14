@@ -13,7 +13,7 @@ header, .hero-section {
 }
 /* HEADER */
 header {
-    padding: 13px;
+    padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,13 +50,13 @@ header .nav-bar {
     justify-content: center; /* Center the logo horizontally */
 }
 
-/* Image styling */
 .logo img {
     max-width: 100%; /* Ensures the logo fits within its container */
-    max-height: 60px; /* Set a max height to control the image size */
+    max-height: 50px; /* Controls image height */
     width: auto; /* Maintain aspect ratio */
     height: auto; /* Maintain aspect ratio */
-    
+    border-radius: 5px; /* Optional, remove if no rounded corners needed */
+    background-color: transparent; /* Ensures no background color */
 }
 /***********Navbar**************/
 .nav-bar ul{
