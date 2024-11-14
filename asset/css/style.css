@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Creepster&family=Fredoka:wght@300..700&family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 
 
+
 body, ul{
     margin: 0;
     padding: 0;
@@ -553,5 +554,106 @@ footer {
         height: 200vh;
     } 
 }
+/************************************************vm*********************************************/
+.vmv-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    padding: 6rem;
+    background-color: rgba(0, 0, 0, 0.575);
+    flex-wrap: wrap; /* Allows the cards to wrap on smaller screens */
+}
+
+.vmv-card {
+    flex: 1;
+    max-width: 300px;
+    padding: 2rem;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 7px 4px 10px rgba(0, 0, 0, 0.342);
+    transition: transform 0.3s ease;
+}
+
+.vmv-card:hover {
+    transform: translateY(-5px);
+}
+
+.vmv-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.575);
+    border-radius: 50%;
+}
+
+.vmv-icon i {
+    font-size: 1.5rem;
+    color: black;
+}
+
+.vmv-card h2 {
+    margin: 0 0 1rem;
+    color: #333;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: "Pacifico", cursive;
+}
+
+.vmv-card p {
+    margin: 0;
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Media Query for Tablets */
+@media (max-width: 768px) {
+    .vmv-container {
+        padding: 3rem;
+        gap: 1.5rem;
+    }
+
+    .vmv-card {
+        max-width: 100%; /* Cards will take the full width */
+    }
+}
+
+/* Media Query for Mobile Phones */
+@media (max-width: 480px) {
+    .vmv-container {
+        padding: 1.5rem;
+        flex-direction: column; /* Stack the cards vertically */
+        gap: 1rem;
+    }
+
+    .vmv-card {
+        max-width: 100%; /* Cards take full width */
+        padding: 1.5rem;
+    }
+
+    .vmv-card h2 {
+        font-size: 1.3rem; /* Slightly reduce heading size */
+    }
+
+    .vmv-card p {
+        font-size: 0.9rem; /* Adjust paragraph size for readability */
+    }
+
+    .vmv-icon {
+        width: 60px; /* Adjust icon size */
+        height: 60px;
+    }
+
+    .vmv-icon i {
+        font-size: 1.2rem;
+    }
+}
+
 
   
