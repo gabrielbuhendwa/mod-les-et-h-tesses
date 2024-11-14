@@ -58,6 +58,35 @@ header .nav-bar {
     border-radius: 5px; /* Optional, remove if no rounded corners needed */
     background-color: transparent; /* Ensures no background color */
 }
+/*********************************translate********************************************/
+.language-switcher {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.language-switcher i {
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.language-switcher select {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 100%; /* Position below the icon */
+    left: 0;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: white;
+}
+
+.language-switcher select.visible {
+    display: block; /* Show when visible class is added */
+}
+
 /***********Navbar**************/
 .nav-bar ul{
     list-style: none;

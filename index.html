@@ -13,8 +13,6 @@
     <div class="nav-bar">
         <div class="logo">
             <span><img src="/asset/images/LOGO_GCG_LTD-removebg-preview.png" alt="Landscape 1" class="img1"></span> <!-- Replace with your logo -->
-            <div id="google_translate_element"></div>
-            
         </div>
         <nav>
             <ul>
@@ -36,6 +34,20 @@
         <div class="menu-toggle">
             <i class="fa-solid fa-bars"></i> <!-- Initial icon -->
         </div>
+        <div class="language-switcher">
+          <i class="fa-solid fa-language"></i>
+          <select id="language-select" class="hidden">
+              <option value="en">English</option>
+              <option value="fr" selected>Français</option>
+              <option value="es">Español</option>
+              <option value="de">Deutsch</option>
+              <option value="zh">中文</option>
+              <option value="ar">العربية</option>
+              <option value="hi">हिन्दी</option>
+          </select>
+        </div>
+      </div>
+      
     </div>
 </header>
 <!-- Mobile Menu -->
@@ -58,6 +70,19 @@
         </ul>
     </nav>
     <button class="contact-btn">Contactez Nous</button>
+    <div class="language-switcher">
+      <i class="fa-solid fa-language"></i>
+      <select id="language-select" class="hidden">
+          <option value="en">English</option>
+          <option value="fr" selected>Français</option>
+          <option value="es">Español</option>
+          <option value="de">Deutsch</option>
+          <option value="zh">中文</option>
+          <option value="ar">العربية</option>
+          <option value="hi">हिन्दी</option>
+      </select>
+  </div>
+  
 </div>
 
   
@@ -109,16 +134,26 @@
         });
     });
    </script>
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-          pageLanguage: 'fr', // Set your default language, e.g., 'fr' for French
-          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-          autoDisplay: false
-      }, 'google_translate_element');
-  }
+<script>
+  document.querySelector('.language-switcher i').addEventListener('click', function() {
+      const languageSelect = document.getElementById('language-select');
+      languageSelect.classList.toggle('visible'); // Toggle visibility
+  });
+
+  document.getElementById('language-select').addEventListener('change', function() {
+      const lang = this.value;
+      const defaultLang = 'en'; // Adjust if necessary
+      const availableLangs = ['en', 'fr', 'es', 'de', 'zh', 'ar', 'hi'];
+
+      if (availableLangs.includes(lang)) {
+          window.location.href = `/${lang}/index.html`; // Redirect to the language folder
+      } else {
+          window.location.href = `/${defaultLang}/index.html`; // Fallback for unsupported languages
+      }
+  });
 </script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
 
 </body>
 </html>
