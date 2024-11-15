@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inscription Hôtesses</title>
+  <title>Inscription Modèles</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="/asset/css/hôtesses.css">
+  <link rel="stylesheet" href="/asset/css/modèle.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
@@ -18,15 +18,14 @@
   <header>
     <div class="nav-bar">
         <div class="logo">
-            <span>🌿</span> <!-- Replace with your logo -->
+            <span><img src="/asset/images/LOGO_GCG_LTD-removebg-preview.png" alt="Landscape 1" class="img1"></span> <!-- Replace with your logo -->
         </div>
         <nav>
             <ul>
                 <li><a href="/index.html">Acceuil</a></li>
-                <li><a href="#">À Propos</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Gallerie</a></li>
-                <li><a href="#">Actualités</a></li>
+                <li><a href="/pages/about_us.html">À Propos</a></li>
+                <li><a href="/pages/services.html">Services</a></li>
+                <li><a href="/pages/gallerie.html">Gallerie</a></li>
                 <li class="dropdown">
                     <a href="#">S'inscrire</a>
                     <ul class="dropdown-menu">
@@ -48,10 +47,9 @@
     <nav>
         <ul>
             <li><a href="/index.html">Acceuil</a></li>
-            <li><a href="#">À Propos</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Gallerie</a></li>
-            <li><a href="#">Actualités</a></li>
+            <li><a href="/pages/about_us.html">À Propos</a></li>
+            <li><a href="/pages/services.html">Services</a></li>
+            <li><a href="/pages/gallerie.html">Gallerie</a></li>
             <li class="dropdown">
                 <a href="#">S'inscrire</a>
                 <ul class="dropdown-menu">
@@ -66,7 +64,7 @@
 
   <section class="hero-section">
     <div class="form-container">
-        <h1>S'inscrire comme Modèle</h1>
+        <h1>S'inscrire comme Hôtesse</h1>
         <form action="#" method="POST">
             <!-- Personal Information Section -->
             <div class="form-grid">
@@ -103,7 +101,7 @@
                 </div>
     
                 <div class="form-group">
-                    <label for="phone">Téléphone ::</label>
+                    <label for="phone">WhatsApp:</label>
                     <input type="tel" id="phone" name="phone" required>
 
     
@@ -166,11 +164,19 @@
             </div>
     
             <p class="upload-guide">
-              Veuillez télécharger les images requises : une photo de profil, une photo en pied, ainsi que toute autre image pertinente.
+                Merci de fournir une pièce d’identité, un portrait (face et profil), un corps entier (face et profil), une photo en mouvement et une en tenue de bain pour finaliser votre inscription.
             </p>
             <div class="file-upload-section">
                 <div class="file-upload-item">
-                    <label for="close-up">Photo Passeport:</label>
+                    <label for="close-up">Photo de pièce officielle</label>
+                    <input type="file" id="close-up" name="close-up" accept="image/*">
+                    <div class="upload-icon">
+                        <i class="fa-solid fa-upload"></i>
+                    </div>
+                </div>
+
+                <div class="file-upload-item">
+                    <label for="close-up">Portrait face</label>
                     <input type="file" id="close-up" name="close-up" accept="image/*">
                     <div class="upload-icon">
                         <i class="fa-solid fa-upload"></i>
@@ -178,7 +184,7 @@
                 </div>
             
                 <div class="file-upload-item">
-                    <label for="close-up">Photo en Gros Plan</label>
+                    <label for="close-up">Portrait profil</label>
                     <input type="file" id="close-up" name="close-up" accept="image/*">
                     <div class="upload-icon">
                         <i class="fa-solid fa-upload"></i>
@@ -186,7 +192,7 @@
                 </div>
             
                 <div class="file-upload-item">
-                    <label for="profile">Photo de Profil</label>
+                    <label for="profile">Corps entier, face et profil.</label>
                     <input type="file" id="profile" name="profile" accept="image/*">
                     <div class="upload-icon">
                         <i class="fa-solid fa-upload"></i>
@@ -194,7 +200,7 @@
                 </div>
             
                 <div class="file-upload-item">
-                    <label for="half-profile">Photo de Profil Semi-Face</label>
+                    <label for="half-profile">Photo en mouvement</label>
                     <input type="file" id="half-profile" name="half-profile" accept="image/*">
                     <div class="upload-icon">
                         <i class="fa-solid fa-upload"></i>
@@ -202,7 +208,7 @@
                 </div>
             
                 <div class="file-upload-item">
-                    <label for="full-length">Photo en Pied</label>
+                    <label for="full-length">Photo en tenue de bain</label>
                     <input type="file" id="full-length" name="full-length" accept="image/*">
                     <div class="upload-icon">
                         <i class="fa-solid fa-upload"></i>
@@ -219,14 +225,14 @@
     
     </section>
     <footer>
-      <div class="footer-about">
-        <h3>Faites briller vos événements avec nos modèles et hôtesses !</h3>
-        <p>Collaborons ensemble pour donner vie à vos idées dans le domaine du mannequinat et de l’hôtessariat.</p>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 SoftCreatix. Tous droits réservés.</p>
-        <p>Développé par SoftCreatix</p>
-      </div>
+        <div class="footer-about">
+          <h3>Faites briller vos événements avec nos modèles et hôtesses !</h3>
+          <p>Collaborons ensemble pour donner vie à vos idées dans le domaine du mannequinat et de l’hôtessariat.</p>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 GENERAL CONSULTING GROUP. Tous droits réservés.</p>
+          <p>Développé par SoftCreatix</p>
+        </div>
     </footer>
     
 </body>
