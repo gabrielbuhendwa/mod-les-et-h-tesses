@@ -261,16 +261,18 @@ header .nav-bar {
 }
 /*********************************services*************************************************************/
 /****************************HERO SECTION***********************/
+/* Updated Service Card Styles */
 .hero-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 65px;
-    padding: 40px 20px; 
-    position: relative; 
-    z-index: 1; 
+    padding: 40px 20px;
+    position: relative;
+    z-index: 1;
 }
+
 .hero-section::before {
     content: '';
     position: absolute;
@@ -279,35 +281,35 @@ header .nav-bar {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.699);
-    z-index: -1; 
+    z-index: -1;
 }
 
-  .services-header {
+.services-header {
     text-align: center;
     margin-bottom: 3rem;
-  }
-  
-  .services-header p {
+}
+
+.services-header p {
     color: #fff;
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
-  }
-  
-  .services-header h2 {
-    font-size: 2.5rem;
+}
+
+.services-header h2 {
+    font-size: 2rem;
     margin: 0;
     color: whitesmoke;
-  }
-  
-  .services-grid {
+}
+
+.services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
-  }
-  
-  .service-card {
+}
+
+.service-card {
     background-color: white;
     border-radius: 15px;
     padding: 2rem;
@@ -315,34 +317,92 @@ header .nav-bar {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-  }
-  
-  .service-card:first-child {
-    background-color: #9AE65C;
-  }
-  
-  .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  .service-card::before {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.service-card::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1));
-    transform: translateX(-100%);
-    transition: transform 0.6s ease;
-  }
-  
-  .service-card:hover::before {
-    transform: translateX(100%);
-  }
-  
-  .icon-wrapper {
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.service-card:nth-child(1) {
+    background-color: #9AE65C;
+}
+
+.service-card:nth-child(2) {
+    background-color: #FFB703;
+}
+
+.service-card:nth-child(3) {
+    background-color: #219EBC;
+}
+
+.service-card:nth-child(4) {
+    background-color: #FF5A5F;
+}
+
+.service-card:nth-child(1)::before {
+    background: rgba(0, 0, 0, 0.623);
+}
+
+.service-card:nth-child(2)::before {
+    background: rgba(0, 0, 0, 0.623);
+}
+
+.service-card:nth-child(3)::before {
+    background: rgba(0, 0, 0, 0.623);
+}
+
+.service-card:nth-child(4)::before {
+    background-image: url('/asset/images/img5.jpeg');
+    background: rgba(0, 0, 0, 0.623);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin: 0 0 1rem 0;
+    color: white;
+    font-family: "Pacifico", cursive;
+}
+
+.service-card p {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    color: white;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    
+
+}
+
+.service-card:hover::before {
+    opacity: 0.9;
+    
+   
+}
+
+.service-card:hover h3,
+.service-card:hover p {
+    animation: textSlideDown 0.5s ease-in-out, textSlideUp 0.5s ease-in-out;
+    color: white;
+    
+}
+
+.icon-wrapper {
     width: 50px;
     height: 50px;
     background-color: #000;
@@ -352,66 +412,84 @@ header .nav-bar {
     justify-content: center;
     margin-bottom: 1.5rem;
     transition: transform 0.3s ease;
-  }
-  
-  .service-card:first-child .icon-wrapper {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  .service-card:hover .icon-wrapper {
-    transform: rotate(360deg);
-  }
-  
-  .icon-wrapper i {
+    z-index: 2;
+}
+
+.icon-wrapper i {
     color: white;
     font-size: 1.5rem;
-  }
-  
-  .service-card h3 {
-    font-size: 1.5rem;
-    margin: 0 0 1rem 0;
-  }
-  
-  .service-card p {
-    margin: 0;
-    line-height: 1.6;
-    font-size: 0.95rem;
-    color: #555;
-  }
-  
-  @media (max-width: 768px) {
-    .services-grid {
-      grid-template-columns: 1fr;
-    }
+}
+
+.service-card:hover .icon-wrapper {
+    transform: scale(1.2);
     
-    .services-header h2 {
-      font-size: 2rem;
-    }
-  }
-  
-  /* Adding animation keyframes for initial load */
-  @keyframes fadeInUp {
+}
+
+/* Keyframes for Text Animation */
+@keyframes textSlideDown {
     from {
-      opacity: 0;
-      transform: translateY(20px);
+        transform: translateY(-20px);
+        opacity: 0;
     }
     to {
-      opacity: 1;
-      transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
     }
-  }
-  
-  .service-card {
-    animation: fadeInUp 0.6s ease forwards;
-    opacity: 0;
-  }
-  
-  .service-card:nth-child(1) { animation-delay: 0.1s; }
-  .service-card:nth-child(2) { animation-delay: 0.2s; }
-  .service-card:nth-child(3) { animation-delay: 0.3s; }
-  .service-card:nth-child(4) { animation-delay: 0.4s; }
-  .service-card:nth-child(5) { animation-delay: 0.5s; }
-  .service-card:nth-child(6) { animation-delay: 0.6s; }
+}
+
+@keyframes textSlideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Keyframes for initial load */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.service-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.service-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.service-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.service-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+@media (max-width: 989px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-header h2 {
+        font-size: 2rem;
+    }
+}
+h1{
+    font-size: 2rem;
+    color: whitesmoke;
+    font-family: "Pacifico", cursive;
+}
   /*footer*/
 footer {
     background-color: rgba(0, 0, 0, 0.952);
