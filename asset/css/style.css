@@ -612,20 +612,8 @@ footer {
     font-size: 0.95rem;
 }
 
-/* Media Query for Tablets */
-@media (max-width: 768px) {
-    .vmv-container {
-        padding: 3rem;
-        gap: 1.5rem;
-    }
-
-    .vmv-card {
-        max-width: 100%; /* Cards will take the full width */
-    }
-}
-
-/* Media Query for Mobile Phones */
-@media (max-width: 480px) {
+/* Media Query*/
+@media screen and (max-width: 1000px) {
     .vmv-container {
         padding: 1.5rem;
         flex-direction: column; /* Stack the cards vertically */
