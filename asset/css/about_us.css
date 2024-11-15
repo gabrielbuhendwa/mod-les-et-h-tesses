@@ -262,7 +262,7 @@ header .nav-bar {
     z-index: 2;
     border-radius: 5px;
 }
-/* About Section*/
+
 /* General Section Styling */
 .about-section {
     padding: 2rem;
@@ -312,6 +312,14 @@ header .nav-bar {
     .about-title {
         font-size: 2.5rem;
     }
+}
+@media (max-width: 490px) {
+    .content-wrapper {
+        
+        padding: 2.2rem;
+        width: 90%;
+    }
+    
 }
 
 
