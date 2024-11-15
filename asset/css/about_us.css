@@ -262,6 +262,59 @@ header .nav-bar {
     z-index: 2;
     border-radius: 5px;
 }
+/* About Section*/
+/* General Section Styling */
+.about-section {
+    padding: 2rem;
+    margin: 0 auto;
+    
+}
+
+.content-wrapper {
+    position: relative;
+    padding: 2rem;
+    width: 70%;
+}
+
+/* Title Styling */
+.about-title {
+    grid-column: 1 / -1; /* Spans across both columns */
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: whitesmoke;
+    font-family: "Pacifico", cursive;
+}
+
+/* Text Content Styling */
+.text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center; /* Centers text vertically in its container */
+    align-items: center; /* Centers text horizontally in its container */
+    text-align: center; /* Centers text within each paragraph */
+}
+
+.text-content p {
+    color: whitesmoke;
+    font-size: 1.25rem;
+    line-height: 1.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr; /* Stacks columns for smaller screens */
+        text-align: center;
+    }
+
+    .about-title {
+        font-size: 2.5rem;
+    }
+}
+
+
 /******************************************************************Hero section**********************************************************************/
 .hero-section {
     display: flex;
@@ -283,122 +336,24 @@ header .nav-bar {
     z-index: -1;
 }
 
-.gallery-title {
-    font-size: 24px;
-    color: whitesmoke;
-    text-align: center;
-    padding-top: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    font-family: "Pacifico", cursive;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
-    padding: 20px;
-    color: whitesmoke;
-    font-weight: bolder;
-    padding-top: 40px;
-}
-
-.card {
-    position: relative;
-    overflow: hidden;
-    box-shadow: 7px 4px 10px rgba(0, 0, 0, 0.342);
-    transition: transform 0.3s ease;
-    text-align: center;
-    border-radius: 4px;
-}
-
-.card img {
-    width: 100%;
-    height: 100%; /* Ensures the image fills the card vertically */
-    object-fit: cover; /* Ensures the image covers the area without stretching */
-    display: block;
-    transition: transform 0.3s ease;
-}
-.card h3 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.897);
-    padding: 10px;
-    margin: 0;
-    font-size: 16px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.card:hover img {
-    transform: scale(1.1);
-}
-
-.card:hover h3 {
-    transform: translateY(100%);
-}
-
-/* Details that will appear after 1 second */
-.card-details {
-    position: absolute;
-    top: 50%;    /* Centers the card details vertically */
-    left: 50%;   /* Centers the card details horizontally */
-    transform: translate(-50%, -50%);  /* Ensures exact centering by offsetting by half the element's size */
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.945);  /* Black background with opacity */
-    color: white;
-    padding: 20px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 1s ease, visibility 1s ease;
-}
-
-.card:hover .card-details {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* Animation and Styling for Card Details */
-.card-details p {
-    font-size: 14px;
-    margin: 10px 0;
-}
-.card-details p:first-child {
- /* Adds extra space below the first <p> */
-    font-size: 16px; /* Highlight the 'Modèle' */
-    font-weight: bold;
-    font-family: "Pacifico", cursive;
-    color: rgba(0, 255, 242, 0.589);
-}
-
-/* Transition for the card on hover */
-.card:hover {
-    transform: scale(1.05);
-}
-
-@media screen and (max-width: 900px) {
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
     }
 
-    .hero-section {
-        padding: 20px;
-    }
-
-    .gallery-title {
-        font-size: 20px;
+    .about-content h1 {
+        font-size: 3rem;
     }
 }
-/*****************************footer***********************/
+
+
+
+
+
+
+
+/******************footer******************/
 footer {
     background-color: rgba(0, 0, 0, 0.952);
     color: white;
@@ -421,22 +376,3 @@ footer {
     padding-top: 20px;
     color: lightgrey;
   }
-/***************************Mediaquery****************************************/
-@media screen and (max-width: 580px) {
-    .gallery {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 50px;
-    }
-    .gallery-title {
-        padding-top: 80px;
-    }
-}
-@media screen and (max-width: 400px) {
-    .gallery {
-        gap: 40px;
-    }
-    .gallery-title {
-        padding-top: 100px; 
-    }
-}

@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="/asset/css/services.css"/>
-    <title>Nos Services</title>
+    <title>Presson - About Us</title>
+    <link rel="stylesheet" href="/asset/css/about_us.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -23,7 +23,7 @@
                         <a href="#">S'inscrire</a>
                         <ul class="dropdown-menu">
                             <li><a href="/pages/modèle.html">Modèle</a></li>
-                            <li><a href="/pages/hôtesses.html">Hôtesse</a></li>
+                            <li><a href="/pages/modèle.html">Hôtesse</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -40,9 +40,10 @@
         <nav>
             <ul>
                 <li><a href="/index.html">Acceuil</a></li>
-                <li><a href="/pages/about_us.html">À Propos</a></li>
+                <li><a href="#">À Propos</a></li>
                 <li><a href="/pages/services.html">Services</a></li>
                 <li><a href="/pages/gallerie.html">Gallerie</a></li>
+                <li><a href="#">Actualités</a></li>
                 <li class="dropdown">
                     <a href="#">S'inscrire</a>
                     <ul class="dropdown-menu">
@@ -55,51 +56,19 @@
         <button class="contact-btn">Contactez Nous</button>
     </div>
 
-
-    
     <section class="hero-section">
-        <div class="services-header">
-          <h1>Nos Services</h1>
-          <h2>Nous proposons une gamme de services de premier ordre, adaptés aux besoins spécifiques de chaque client</h2>
+        <div class="content-wrapper">
+            <div class="about-content">
+                <h1 class="about-title">ABOUT US</h1>
+                    <div class="text-content">
+                        <p>Hackney started as a small interior design firm in downtown Michigan, aiming to help home buyers to make do with the new space that they had acquired. It soon became obvious that it would make sense to help our clients see beyond the walls and floor plans, and be there with them from the get-go.</p>
+                        <p>Currently, we offer house realtor, interior design, and architecture services in order to help our customers find their forever homes as seamlessly and painlessly as possible. We value our customers above everything else, meaning that we won't take 'OK' as an answer.</p>
+                    </div>
+            </div>
         </div>
         
-        <div class="services-grid">
-          <div class="service-card service-mannequins">
-            <div class="icon-wrapper">
-              <i class="fa-solid fa-user-tie"></i>
-            </div>
-            <h3>Mannequins Professionnels</h3>
-            <p>Nous mettons à disposition des mannequins soigneusement sélectionnés pour répondre aux besoins des campagnes publicitaires, des défilés de mode, des shootings éditoriaux, et bien plus encore. Nos mannequins allient charisme, présence scénique et professionnalisme, offrant ainsi une représentation visuelle impeccable pour chaque marque.</p>
-          </div>
-      
-          <div class="service-card service-hotesses">
-            <div class="icon-wrapper">
-              <i class="fa-solid fa-handshake-angle"></i>
-            </div>
-            <h3>Hôtesses & Hôtes</h3>
-            <p>Nos hôtesses et hôtes sont formés pour offrir un service d'accueil exceptionnel, alliant courtoisie, élégance et professionnalisme. Que ce soit pour des salons, des conférences, des événements privés ou d'entreprise, notre personnel d'accueil est à l’image de l’excellence que nous défendons.</p>
-          </div>
-      
-          <div class="service-card service-promotion">
-            <div class="icon-wrapper">
-              <i class="fa-solid fa-bullseye"></i>
-            </div>
-            <h3>Services de Promotion & Street Marketing</h3>
-            <p> Pour les campagnes promotionnelles qui requièrent une approche directe et impactante, nous fournissons des équipes dynamiques et expérimentées capables de représenter votre marque dans des actions de terrain avec un engagement qui marque les esprits.</p>
-          </div>
-      
-          <div class="service-card service-evenements">
-            <div class="icon-wrapper">
-              <i class="fa-solid fa-calendar-check"></i>
-            </div>
-            <h3>Coordination d’Événements</h3>
-            <p>Avec une solide expertise en gestion événementielle, nous prenons en charge la planification et l’organisation de vos événements, garantissant une exécution sans faille. Notre équipe assure un service clé en main, de la conception à la mise en œuvre, pour un événement mémorable.</p>
-          </div>
-        </div>
-      </section>
-      
-      
-      <footer>
+    </section>
+    <footer>
         <div class="footer-about">
           <h3>Faites briller vos événements avec nos modèles et hôtesses !</h3>
           <p>Collaborons ensemble pour donner vie à vos idées dans le domaine du mannequinat et de l’hôtessariat.</p>
@@ -110,6 +79,7 @@
         </div>
     </footer>
 </body>
+
 <script>
     document.addEventListener('DOMContentLoaded', function () {
       const menuToggle = document.querySelector('.menu-toggle');
