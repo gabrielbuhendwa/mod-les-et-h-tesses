@@ -120,12 +120,13 @@
                     <label for="height">Taille:</label>
                     <select id="height" name="height" required></select>
 
-                    <label for="birthdate">Langues:</label>
+                    <label for="languages">Langues (Sélectionnez jusqu'à 3):</label>
                     <div class="birthdate-fields">
-                        <select id="africa"></select>
-                        <select id="amarica"></select>
-                        <select id="europe"></select>
+                        <select id="language-group-1"></select>
+                        <select id="language-group-2"></select>
+                        <select id="language-group-3"></select>
                     </div>
+
 
 
                     <label for="hair">cheveux:</label>
@@ -205,29 +206,6 @@
                     </div>
                 </div>
             
-                <div class="file-upload-item">
-                    <label for="profile">Corps entier, face et profil.</label>
-                    <input type="file" id="profile" name="profile" accept="image/*">
-                    <div class="upload-icon">
-                        <i class="fa-solid fa-upload"></i>
-                    </div>
-                </div>
-            
-                <div class="file-upload-item">
-                    <label for="half-profile">Photo en mouvement</label>
-                    <input type="file" id="half-profile" name="half-profile" accept="image/*">
-                    <div class="upload-icon">
-                        <i class="fa-solid fa-upload"></i>
-                    </div>
-                </div>
-            
-                <div class="file-upload-item">
-                    <label for="full-length">Photo en tenue de bain</label>
-                    <input type="file" id="full-length" name="full-length" accept="image/*">
-                    <div class="upload-icon">
-                        <i class="fa-solid fa-upload"></i>
-                    </div>
-                </div>
             </div>
             <!-- Submit Button -->
             <div class="submit-container">
@@ -406,9 +384,39 @@
       });
   });
  </script>
+ <!---------languages------->
+ <script>
+    // Define arrays of languages for each group
+    const languagesGroup1 = [
+        "Anglais", "Mandarin", "Espagnol", "Hindoustani", "Arabe",
+        "Bengali", "Portugais", "Russe", "Japonais", "Panjabi"
+    ];
+    
+    const languagesGroup2 = [
+        "Swahili", "Hausa", "Yoruba", "Igbo", "Amharique",
+        "Shona", "Oromo", "Xhosa", "Zulu", "Somali"
+    ];
+    
+    const languagesGroup3 = [
+        "Vietnamien", "Coréen", "Turc", "Italien", "Thaï",
+        "Farsi", "Allemand", "Français", "Tamoul", "Ourdou"
+    ];
 
- <!---------language------->
+    // Function to populate select elements
+    function populateLanguages(selectId, languages) {
+        const selectElement = document.getElementById(selectId);
+        languages.forEach(language => {
+            const option = document.createElement("option");
+            option.value = language;
+            option.textContent = language;
+            selectElement.appendChild(option);
+        });
+    }
 
+    // Populate all language groups
+    populateLanguages("language-group-1", languagesGroup1);
+    populateLanguages("language-group-2", languagesGroup2);
+    populateLanguages("language-group-3", languagesGroup3);
+</script>
 
-  
 </html>
