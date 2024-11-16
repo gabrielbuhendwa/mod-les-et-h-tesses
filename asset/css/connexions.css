@@ -283,6 +283,7 @@ header .nav-bar {
     border-radius: 10px;
     max-width: 400px;
     width: 90%;
+    margin-top: 100px;
 }
 
 .contact-form {
@@ -393,7 +394,11 @@ footer {
         width: 100%;
     }
 }
-
+@media (max-width: 495px) {
+    .contact-section {
+        width: 85%;
+    }
+}
 @media (max-width: 420px) {
     .contact-form h2 {
         font-size: 1.4rem;
@@ -403,8 +408,4 @@ footer {
         width: 100%;
     }
 }
-@media (max-width: 495px) {
-    .contact-section {
-        width: 85%;
-    }
-}
+
