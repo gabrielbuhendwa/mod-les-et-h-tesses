@@ -258,6 +258,8 @@ header .nav-bar {
     background: url('/asset/images/background.jpg') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
+    position: relative;
+    z-index: 1; 
 }
 
 /* Add a dark overlay using ::before */
@@ -268,9 +270,10 @@ header .nav-bar {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.699); /* Dark overlay */
+    background: rgba(0, 0, 0, 0.699);
     z-index: -1; /* Ensure it's behind content */
 }
+
 
 .contact-section {
     padding: 2rem;
