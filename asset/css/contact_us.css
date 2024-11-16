@@ -423,14 +423,21 @@ header .nav-bar {
   .contact-info {
     font-size: 1rem;
     }
-    .contact-info h2 {
-        font-size: 1.5rem;
-    }
-    .contact-form h2 {
-        font-size: 1.5rem;
-    }
+   
     
 }
+@media (max-width: 350px) {
+    .contact-info {
+      font-size: 0.90rem;
+      }
+      .contact-info h2 {
+          font-size: 1rem;
+      }
+      .contact-form h2 {
+          font-size: 1rem;
+      }
+      
+  }
 /***********************footer***************************************/
 footer {
     background-color: rgba(0, 0, 0, 0.952);
