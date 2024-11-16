@@ -82,18 +82,20 @@ header .nav-bar {
     margin-right: 30px;
 }
 /******************Contact Button**********************/
-
 .contact-btn {
-    padding: 10px 10px;
-    border: 1px solid #333;
-    background-color: rgba(245, 245, 245, 0.884);
+    background-color: rgba(0, 0, 0, 0.952);
+    color: black;
     font-weight: bold;
     cursor: pointer;
-    position: relative;
-    z-index: 2;
+    transition: background 0.3s ease;
+    padding: 15px 30px;
+    width: 130px;
+    text-align: center;
+    border: none;
     border-radius: 5px;
-    text-decoration: none;
+    
 }
+
 .contact-btn:hover {
     background-color: rgba(0, 0, 0, 0.822);
     color: whitesmoke;
@@ -336,6 +338,18 @@ header .nav-bar {
 .link:hover {
     text-decoration: underline;
 }
+/*****************************Adjust position Contact buttom**************************/
+.contact-btn {
+    padding: 10px 10px;
+    border: 1px solid #333;
+    background-color: rgba(245, 245, 245, 0.884);
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    border-radius: 5px;
+    text-decoration: none;
+}
 /*****************************footer*************************************/
 footer {
     background-color: rgba(0, 0, 0, 0.952);
@@ -387,5 +401,10 @@ footer {
 
     .send-btn {
         width: 100%;
+    }
+}
+@media (max-width: 495px) {
+    .contact-section {
+        width: 85%;
     }
 }
