@@ -54,7 +54,7 @@ header .nav-bar {
 
 .logo img {
     max-width: 100%; /* Ensures the logo fits within its container */
-    max-height: 50px; /* Controls image height */
+    max-height: 70px;  /* Controls image height */
     width: auto; /* Maintain aspect ratio */
     height: auto; /* Maintain aspect ratio */
     border-radius: 5px; /* Optional, remove if no rounded corners needed */
@@ -115,7 +115,7 @@ header .nav-bar {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    margin-top: 86px;
+    margin-top: 105px;
     height: 50vh;
     text-align: center; /* Center the text in the mobile menu */
     border-bottom-left-radius: 10px;
@@ -284,6 +284,7 @@ header .nav-bar {
     text-align: center;
     color: whitesmoke;
     font-family: "Pacifico", cursive;
+    margin-top: 80px;
 }
 
 /* Text Content Styling */
@@ -294,6 +295,7 @@ header .nav-bar {
     justify-content: center; /* Centers text vertically in its container */
     align-items: center; /* Centers text horizontally in its container */
     text-align: center; /* Centers text within each paragraph */
+   
 }
 
 .text-content p {

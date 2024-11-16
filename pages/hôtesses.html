@@ -18,7 +18,7 @@
   <header>
     <div class="nav-bar">
         <div class="logo">
-            <span><img src="/asset/images/LOGO OK.png" alt="Landscape 1" class="img1"></span> <!-- Replace with your logo -->
+            <span><img src="/asset/images/GENERAL_CONS_LOGO.pdf_2_-removebg-preview.png" alt="Landscape 1" class="img1"></span> <!-- Replace with your logo -->
         </div>
         <nav>
             <ul>
@@ -102,6 +102,8 @@
                     <label for="country">Nationlité:</label>
                     <input type="text" id="country" name="country" required>
 
+                    <label for="country">Téléphone:</label>
+                    <input type="text" id="country" name="country" required>
                 </div>
     
                 <div class="form-group">
@@ -117,7 +119,19 @@
     
                     <label for="height">Taille:</label>
                     <select id="height" name="height" required></select>
-    
+
+                    <label for="languages">Langues(jusqu'à 3):</label>
+                    <div class="birthdate-fields">
+                        <select id="language-group-1">
+                            <option value="" disabled selected>Sélectionnez une langue</option>
+                        </select>
+                        <select id="language-group-2">
+                            <option value="" disabled selected>Sélectionnez une langue</option>
+                        </select>
+                        <select id="language-group-3">
+                            <option value="" disabled selected>Sélectionnez une langue</option>
+                        </select>
+                    </div>
                     <label for="hair">cheveux:</label>
                     <select id="hair" name="hair">
                         <option value="" disabled selected>Sélectionnez la couleur des cheveux</option>
@@ -168,11 +182,11 @@
             </div>
     
             <p class="upload-guide">
-                Merci de fournir une pièce d’identité, un portrait (face et profil), un corps entier (face et profil), une photo en mouvement et une en tenue de bain pour finaliser votre inscription.
+                Merci de fournir une pièce d’identité (carte nationale ou permis de conduire) ainsi qu’une photo passeport pour finaliser votre inscription.
             </p>
             <div class="file-upload-section">
                 <div class="file-upload-item">
-                    <label for="close-up">Photo de pièce officielle</label>
+                    <label for="close-up">Photo passeport</label>
                     <input type="file" id="close-up" name="close-up" accept="image/*">
                     <div class="upload-icon">
                         <i class="fa-solid fa-upload"></i>
@@ -180,7 +194,7 @@
                 </div>
 
                 <div class="file-upload-item">
-                    <label for="close-up">Portrait face</label>
+                    <label for="close-up">carte nationale</label>
                     <input type="file" id="close-up" name="close-up" accept="image/*">
                     <div class="upload-icon">
                         <i class="fa-solid fa-upload"></i>
@@ -188,36 +202,13 @@
                 </div>
             
                 <div class="file-upload-item">
-                    <label for="close-up">Portrait profil</label>
+                    <label for="close-up">permis de conduire</label>
                     <input type="file" id="close-up" name="close-up" accept="image/*">
                     <div class="upload-icon">
                         <i class="fa-solid fa-upload"></i>
                     </div>
                 </div>
             
-                <div class="file-upload-item">
-                    <label for="profile">Corps entier, face et profil.</label>
-                    <input type="file" id="profile" name="profile" accept="image/*">
-                    <div class="upload-icon">
-                        <i class="fa-solid fa-upload"></i>
-                    </div>
-                </div>
-            
-                <div class="file-upload-item">
-                    <label for="half-profile">Photo en mouvement</label>
-                    <input type="file" id="half-profile" name="half-profile" accept="image/*">
-                    <div class="upload-icon">
-                        <i class="fa-solid fa-upload"></i>
-                    </div>
-                </div>
-            
-                <div class="file-upload-item">
-                    <label for="full-length">Photo en tenue de bain</label>
-                    <input type="file" id="full-length" name="full-length" accept="image/*">
-                    <div class="upload-icon">
-                        <i class="fa-solid fa-upload"></i>
-                    </div>
-                </div>
             </div>
             <!-- Submit Button -->
             <div class="submit-container">
@@ -396,5 +387,34 @@
       });
   });
  </script>
-  
+ <!---------languages------->
+ <script>
+    // Array of 20 most spoken languages globally
+    const topLanguages = [
+        "Anglais", "Mandarin", "Hindi", "Espagnol", "Français",
+        "Arabe", "Bengali", "Russe", "Portugais", "Urdu",
+        "Swahili", "Allemand", "Japonais", "Coréen", "Turc",
+        "Hausa", "Amharique", "Oromo", "Yoruba", "Igbo",
+        "Shona", "Zulu", "Xhosa", "Somali", "Peul",
+        "Indonésien", "Marathi", "Telugu", "Tamil", "Kinyarwanda"
+    ];
+
+    // Function to populate a select element with the top languages
+    function populateLanguages(selectId) {
+        const selectElement = document.getElementById(selectId);
+        topLanguages.forEach(language => {
+            const option = document.createElement("option");
+            option.value = language;
+            option.textContent = language;
+            selectElement.appendChild(option);
+        });
+    }
+
+    // Populate each language dropdown
+    populateLanguages("language-group-1");
+    populateLanguages("language-group-2");
+    populateLanguages("language-group-3");
+</script>
+
+
 </html>
