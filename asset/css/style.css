@@ -523,7 +523,9 @@ footer {
         width: 35%;
         margin-top: 18px;
     }
-    
+    .hero-content p {
+        font-size: 1.125rem;
+    }
 }
 @media screen and (max-width: 346px){
     .hero-section {
