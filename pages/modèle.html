@@ -102,6 +102,8 @@
                     <label for="country">Nationlité:</label>
                     <input type="text" id="country" name="country" required>
 
+                    <label for="country">Téléphone:</label>
+                    <input type="text" id="country" name="country" required>
                 </div>
     
                 <div class="form-group">
@@ -117,7 +119,15 @@
     
                     <label for="height">Taille:</label>
                     <select id="height" name="height" required></select>
-    
+
+                    <label for="birthdate">Langues:</label>
+                    <div class="birthdate-fields">
+                        <select id="africa"></select>
+                        <select id="amarica"></select>
+                        <select id="europe"></select>
+                    </div>
+
+
                     <label for="hair">cheveux:</label>
                     <select id="hair" name="hair">
                         <option value="" disabled selected>Sélectionnez la couleur des cheveux</option>
@@ -396,5 +406,9 @@
       });
   });
  </script>
+
+ <!---------language------->
+
+
   
 </html>

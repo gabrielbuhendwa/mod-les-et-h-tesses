@@ -54,27 +54,12 @@ header .nav-bar {
 
 .logo img {
     max-width: 100%; /* Ensures the logo fits within its container */
-    max-height: 50px; /* Controls image height */
+    max-height: 70px; /* Controls image height */
     width: auto; /* Maintain aspect ratio */
     height: auto; /* Maintain aspect ratio */
     border-radius: 5px; /* Optional, remove if no rounded corners needed */
     background-color: transparent; /* Ensures no background color */
 }
-/*********************************translate********************************************/
-.language-switcher {
-    position: relative;
-    display: inline-block;
-  }
-  
-  #language-select {
-    display: none; /* Hide by default */
-  }
-  
-  .language-switcher:hover #language-select {
-    display: inline-block; /* Show on hover or toggle */
-  }
-  
-
 /***********Navbar**************/
 .nav-bar ul{
     list-style: none;
