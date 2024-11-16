@@ -9,10 +9,7 @@
   <link rel="stylesheet" href="/asset/css/modèle.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
-
-
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>    
 </head>
 <body>
   <header>
@@ -39,13 +36,12 @@
             <button class="contact-btn">Contactez Nous</button>
         </a>
         <div class="menu-toggle">
-            <i class="fa-solid fa-bars"></i> <!-- Initial icon -->
+            <i class="fa-solid fa-bars"></i>
         </div>
     </div>
 </header>
 <!-- Mobile Menu -->
 <div class="mobile-menu">
-
     <nav>
         <ul>
             <li><a href="/index.html">Acceuil</a></li>
@@ -65,12 +61,10 @@
         <button class="contact-btn">Contactez Nous</button>
     </a>
 </div>
-
   <section class="hero-section">
     <div class="form-container">
         <h1>S'inscrire comme Modèle</h1>
         <form action="#" method="POST">
-            <!-- Personal Information Section -->
             <div class="form-grid">
                 <div class="form-group">
                     <label for="gender">Sex:</label>
@@ -79,7 +73,7 @@
                         <option value="Homme">Homme</option>
                         <option value="Autre">Autre</option>
                     </select>
-    
+
                     <label for="first-name">Prénom:</label>
                     <input type="text" id="first-name" name="first-name" required>
     
@@ -110,7 +104,6 @@
                     <label for="phone">WhatsApp:</label>
                     <input type="tel" id="phone" name="phone" required>
 
-    
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
     
@@ -180,7 +173,6 @@
                       </select>
                 </div>
             </div>
-    
             <p class="upload-guide">
                 Merci de fournir une pièce d’identité (carte nationale ou permis de conduire) ainsi qu’une photo passeport pour finaliser votre inscription.
             </p>
@@ -210,14 +202,11 @@
                 </div>
             
             </div>
-            <!-- Submit Button -->
             <div class="submit-container">
                 <button type="submit" class="submit-btn">Envoyer ma candidature</button>
             </div>
         </form>
     </div>
-    
-    
     </section>
     <footer>
         <div class="footer-about">
@@ -229,7 +218,6 @@
           <p>Développé par SoftCreatix</p>
         </div>
     </footer>
-    
 </body>
 <script>
     document.querySelectorAll('.file-upload-item input[type="file"]').forEach(input => {
@@ -241,10 +229,9 @@
                 const parent = input.parentElement;
                 let img = parent.querySelector('img');
 
-                // Create an img tag if it doesn't exist
                 if (!img) {
                     img = document.createElement('img');
-                    img.style.position = 'absolute'; // Keep it positioned inside the input
+                    img.style.position = 'absolute';
                     img.style.top = '0';
                     img.style.left = '0';
                     img.style.width = '100%';
@@ -252,7 +239,6 @@
                     img.style.objectFit = 'cover'; // Maintain aspect ratio and cover the container
                     parent.appendChild(img);
                 }
-
                 img.src = e.target.result; // Set the uploaded image as the preview
 
                 // Hide the upload icon when an image is displayed
@@ -265,7 +251,7 @@
 });
 </script>
 <script>
-     // Function to generate day options (1-31)
+     // Function for days
      function generateDays() {
             const daySelect = document.getElementById("day");
             for (let i = 1; i <= 31; i++) {
@@ -275,8 +261,7 @@
                 daySelect.appendChild(option);
             }
         }
-
-        // Function to generate month options (Janvier - Décembre)
+        // Function for months
         function generateMonths() {
             const monthSelect = document.getElementById("month");
             const months = [
@@ -291,8 +276,7 @@
                 monthSelect.appendChild(option);
             }
         }
-
-        // Function to generate year options (1970 to 2012)
+        // Function to generate year options (1970 to 2015)
         function generateYears() {
             const yearSelect = document.getElementById("year");
             const startYear = 1970;
@@ -305,7 +289,6 @@
                 yearSelect.appendChild(option);
             }
         }
-
         // Call the functions to populate the selects
         generateDays();
         generateMonths();
@@ -313,8 +296,7 @@
 </script>
 <script>
     const heightSelect = document.getElementById("height");
-  
-    // Mapping of height in cm to feet and inches in French
+    // Mapping of height in cm 
     const heightRange = [
       { cm: 155, ft: "5'1\"" },
       { cm: 156, ft: "5'1\"" },
@@ -363,7 +345,6 @@
       { cm: 199, ft: "6'7\"" },
       { cm: 200, ft: "6'7\"" }
     ];
-  
     heightRange.forEach(height => {
       const option = document.createElement("option");
       option.value = `${height.cm} cm (${height.ft})`;
@@ -387,9 +368,8 @@
       });
   });
  </script>
- <!---------languages------->
  <script>
-    // Array of 20 most spoken languages globally
+    // Array of 30 most spoken languages globally
     const topLanguages = [
         "Anglais", "Mandarin", "Hindi", "Espagnol", "Français",
         "Arabe", "Bengali", "Russe", "Portugais", "Urdu",
@@ -398,7 +378,6 @@
         "Shona", "Zulu", "Xhosa", "Somali", "Peul",
         "Indonésien", "Marathi", "Telugu", "Tamil", "Kinyarwanda"
     ];
-
     // Function to populate a select element with the top languages
     function populateLanguages(selectId) {
         const selectElement = document.getElementById(selectId);
@@ -409,12 +388,9 @@
             selectElement.appendChild(option);
         });
     }
-
     // Populate each language dropdown
     populateLanguages("language-group-1");
     populateLanguages("language-group-2");
     populateLanguages("language-group-3");
 </script>
-
-
 </html>

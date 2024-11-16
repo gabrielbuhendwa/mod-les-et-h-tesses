@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Presson - About Us</title>
-    <link rel="stylesheet" href="/asset/css/about_us.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Mot de Passe Oublié</title>
+    <link rel="stylesheet" href="/asset/css/connexions.css">
 </head>
+
 <body>
     <header>
         <div class="nav-bar">
@@ -28,9 +29,9 @@
                     </li>
                 </ul>
             </nav>
-            <a href="/pages/contact_us.html">
-                <button class="contact-btn">Contactez Nous</button>
-            </a>
+          <a href="/pages/contact_us.html">
+              <button class="contact-btn">Contactez Nous</button>
+          </a>      
             <div class="menu-toggle">
                 <i class="fa-solid fa-bars"></i>
             </div>
@@ -38,13 +39,13 @@
     </header>
     <!-- Mobile Menu -->
     <div class="mobile-menu">
+    
         <nav>
             <ul>
                 <li><a href="/index.html">Acceuil</a></li>
-                <li><a href="#">À Propos</a></li>
+                <li><a href="/pages/about_us.html">À Propos</a></li>
                 <li><a href="/pages/services.html">Services</a></li>
                 <li><a href="/pages/gallerie.html">Galerie</a></li>
-                <li><a href="#">Actualités</a></li>
                 <li class="dropdown">
                     <a href="#">S'inscrire</a>
                     <ul class="dropdown-menu">
@@ -55,17 +56,18 @@
             </ul>
         </nav>
         <a href="/pages/contact_us.html">
-            <button class="contact-btn">Contactez Nous</button>
+          <button class="contact-btn">Contactez Nous</button>
         </a>
     </div>
     <section class="hero-section">
-        <div class="content-wrapper">
-            <div class="about-content">
-                <h1 class="about-title">À Propos de Nous</h1>
-                    <div class="text-content">
-                        <p>Chez Models & Hostesses by General Consulting Group, nous sommes plus qu’une simple agence de mannequins et d'hôtesses – nous sommes le reflet de l'élégance, de l'authenticité, et du professionnalisme au cœur des industries de la mode, de l'événementiel, et de l'hospitalité.</p>
-                        <p>Fondée sous la bannière de General Consulting Group, notre branche spécialisée dans le mannequinat et les services d'hôtesses est une réponse directe aux besoins exigeants et raffinés des entreprises modernes qui recherchent une touche unique et personnalisée pour leurs événements, leurs campagnes de marque, ou leurs activités promotionnelles.</p>
-                    </div>
+        <div class="contact-section">
+            <div class="contact-form">
+                <h2>Mot de Passe Oublié</h2>
+                <form action="#" method="POST">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <button type="submit" class="send-btn">Réinitialiser</button>
+                </form>
+                <p>Nouveau ici ? <a href="signup.html" class="link">Créer un compte</a></p>
             </div>
         </div>
     </section>
@@ -80,20 +82,5 @@
         </div>
     </footer>
 </body>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const menuToggle = document.querySelector('.menu-toggle');
-      const mobileMenu = document.querySelector('.mobile-menu');
-      const toggleIcon = menuToggle.querySelector('i');
 
-      menuToggle.addEventListener('click', () => {
-          // Toggle the mobile menu visibility
-          mobileMenu.classList.toggle('open');
-          
-          // Change the icon between the hamburger and close (X) icon
-          toggleIcon.classList.toggle('fa-bars');
-          toggleIcon.classList.toggle('fa-xmark');
-      });
-  });
- </script>
 </html>
