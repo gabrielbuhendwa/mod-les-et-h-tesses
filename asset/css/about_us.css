@@ -262,7 +262,26 @@ header .nav-bar {
     z-index: 2;
     border-radius: 5px;
 }
+/******************************************************************Hero section**********************************************************************/
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 1;
+}
 
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.699);
+    z-index: -1;
+}
 /* General Section Styling */
 .about-section {
     padding: 2rem;
@@ -314,6 +333,10 @@ header .nav-bar {
     .about-title {
         font-size: 2.5rem;
     }
+    
+    .about-content h1 {
+        font-size: 3rem;
+    }
 }
 @media (max-width: 490px) {
     .content-wrapper {
@@ -323,45 +346,6 @@ header .nav-bar {
     }
     
 }
-
-
-/******************************************************************Hero section**********************************************************************/
-.hero-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
-    position: relative;
-    z-index: 1;
-}
-
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.699);
-    z-index: -1;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .about-content h1 {
-        font-size: 3rem;
-    }
-}
-
-
-
-
-
-
 
 /******************footer******************/
 footer {

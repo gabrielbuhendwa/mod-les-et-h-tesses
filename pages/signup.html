@@ -71,7 +71,7 @@
                     <input type="text" name="phone" placeholder="Numéro de téléphone" required>
                     <input type="file" name="profile_picture" required>
                     <input type="password" name="password" placeholder="Mot de passe" required>
-                    <input type="password" name="confirm_password" placeholder="Répétez le mot de passe" required>
+                    <input type="password" name="confirm_password" placeholder="Confirmez le mot de passe" required>
                     <button type="submit" class="send-btn">S'inscrire</button>
                 </form>
                 <p>Déjà inscrit ? <a href="login.html" class="link">Se connecter</a></p>
@@ -80,14 +80,30 @@
     </section>
     <footer>
         <div class="footer-about">
-          <h3>Faites briller vos événements avec nos modèles et hôtesses !</h3>
-          <p>Collaborons ensemble pour donner vie à vos idées dans le domaine du mannequinat et de l’hôtessariat.</p>
+            <h3>Faites briller vos événements avec nos modèles et hôtesses !</h3>
+            <p>Collaborons ensemble pour donner vie à vos idées dans le domaine du mannequinat et de l’hôtessariat.</p>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2024 GENERAL CONSULTING GROUP. Tous droits réservés.</p>
-          <p>Développé par SoftCreatix</p>
+            <p>&copy; 2024 GENERAL CONSULTING GROUP. Tous droits réservés.</p>
+            <p>Développé par SoftCreatix</p>
+            <p><a href="/pages/policy.html" class="footer-link">Conditions d'utilisation et Politique de confidentialité</a></p>
         </div>
     </footer>
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      const toggleIcon = menuToggle.querySelector('i');
 
+      menuToggle.addEventListener('click', () => {
+          // Toggle the mobile menu visibility
+          mobileMenu.classList.toggle('open');
+          
+          // Change the icon between the hamburger and close (X) icon
+          toggleIcon.classList.toggle('fa-bars');
+          toggleIcon.classList.toggle('fa-xmark');
+      });
+  });
+ </script>
 </html>
