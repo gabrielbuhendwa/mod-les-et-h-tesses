@@ -270,9 +270,9 @@ header .nav-bar {
 .about-title {
     font-size: 1.7rem;
     text-align: center;
-    color: whitesmoke;
+    color: rgba(0, 255, 242, 0.342);
     font-family: "Pacifico", cursive;
-    margin-top: 80px;
+    margin-top: 150px;
     animation: fadeIn 2s ease-in-out;
 }
 .section-title {
@@ -340,19 +340,26 @@ footer {
     color: white;
     padding: 15px 20px;
     text-align: center;
-  }
+}
 .footer-about h3 {
     font-size: 1.25rem;
     margin-bottom: 20px;
     color: lightgrey;
-}  
+}
 .footer-about p {
     margin: 5px 0;
-}  
+}
 .footer-bottom {
     border-top: 1px solid #555;
     padding-top: 20px;
     color: lightgrey;
+}
+.footer-link {
+    color: white;
+    text-decoration: none;
+}
+.footer-link:hover {
+    color: rgba(0, 255, 242, 0.342);
 }
 /************************************mediaquery******************************************************/
 @media screen and (max-width: 768px) {

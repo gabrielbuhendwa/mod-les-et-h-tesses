@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Creepster&family=Fredoka:wght@300..700&family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Creepster&family=Fredoka:wght@300..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Pacifico&display=swap');
-
 
 body, ul{
     margin: 0;
@@ -13,7 +11,7 @@ header, .hero-section {
     background-size: cover; 
     background-attachment: fixed; 
 }
-/* HEADER */
+/***************header****************/
 header {
     padding: 15px;
     display: flex;
@@ -46,19 +44,18 @@ header .nav-bar {
     width: 100%;
 }
 .logo {
-    font-size: 1rem; /* Adjust font size if necessary */
+    font-size: 1rem; 
     display: flex;
-    align-items: center; /* Center the logo vertically */
-    justify-content: center; /* Center the logo horizontally */
+    align-items: center; 
+    justify-content: center; 
 }
-
 .logo img {
-    max-width: 100%; /* Ensures the logo fits within its container */
-    max-height: 70px;  /* Controls image height */
-    width: auto; /* Maintain aspect ratio */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Optional, remove if no rounded corners needed */
-    background-color: transparent; /* Ensures no background color */
+    max-width: 100%;
+    max-height: 70px; 
+    width: auto; 
+    height: auto; 
+    border-radius: 5px; 
+    background-color: transparent; 
 }
 /***********Navbar**************/
 .nav-bar ul{
@@ -84,7 +81,7 @@ header .nav-bar {
     cursor: pointer;
     margin-right: 30px;
 }
-/* Contact Button */
+/*********************************************Contact Button*****************************/
 .contact-btn {
     background-color: rgba(0, 0, 0, 0.952);
     color: black;
@@ -101,10 +98,10 @@ header .nav-bar {
     background-color: rgba(0, 0, 0, 0.822);
     color: whitesmoke;
 }
-/* Mobile Menu */
+/*************************************Mobile Menu********************************/
 .mobile-menu {
     display: none;
-    background-color: white; /* Mobile menu background */
+    background-color: white; 
     position: fixed;
     top: 0;
     left: 0;
@@ -117,20 +114,20 @@ header .nav-bar {
     padding: 20px;
     margin-top: 105px;
     height: 50vh;
-    text-align: center; /* Center the text in the mobile menu */
+    text-align: center; 
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     box-shadow: 7px 4px 10px rgba(0, 0, 0, 0.342);
 }
 .mobile-menu.open {
-    display: flex; /* Show mobile menu */
+    display: flex; 
 }
 .mobile-menu nav ul {
     list-style: none;
     padding: 0;
 }
 .mobile-menu nav ul li {
-    margin: 20px 0; /* Add space between each link */
+    margin: 20px 0; 
 }
 .mobile-menu nav ul li a {
     color: black;
@@ -142,10 +139,9 @@ header .nav-bar {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    margin-top: 30px; /* Adds spacing above the contact button */
+    margin-top: 30px; 
 }
 
-/* Menu Item Animations */
 @keyframes slideIn {
     0% {
         transform: translateX(-100%);
@@ -208,7 +204,6 @@ header .nav-bar {
 .dropdown {
     position: relative; 
 }
-
 /***************Dropdown Menu**********/
 .dropdown-menu {
     position: absolute;
@@ -233,7 +228,7 @@ header .nav-bar {
     display: block;
 }
 .dropdown-menu li {
-    text-align: center; /* Center text inside each dropdown item */
+    text-align: center;
 }
 .dropdown-menu li a {
     color: white;
@@ -263,7 +258,6 @@ header .nav-bar {
     border-radius: 5px;
 }
 /******************************************************************Hero section**********************************************************************/
-/* Hero Section Styling */
 .hero-section {
     display: flex;
     flex-direction: column;
@@ -286,7 +280,6 @@ header .nav-bar {
     z-index: -1;
 }
 
-/* Contact Section Styling */
 .contact-section {
     padding: 4rem 2rem;
     margin: 0 auto;
@@ -297,40 +290,33 @@ header .nav-bar {
     width: 90%;
     max-width: 800px;
 }
-
 .contact-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     align-items: start;
 }
-
-/* Contact Info Styling */
 .contact-info {
     font-size: 1.2rem;
     line-height: 1.8;
 }
-
 .contact-info h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
     font-family: "Pacifico", cursive;
 }
 
-/* Contact Form Styling */
 .contact-form h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
     font-family: "Pacifico", cursive;
 }
-
 .contact-form form {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     animation: fadeInUp 1.5s ease-out;
 }
-
 .contact-form input,
 .contact-form textarea {
     width: 100%;
@@ -343,14 +329,12 @@ header .nav-bar {
     color: #333;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
-
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
     transform: scale(1.02);
     background-color: #f9f9f9bb;
 }
-
 .send-btn {
     background-color: black;
     color: whitesmoke;
@@ -362,7 +346,6 @@ header .nav-bar {
     transition: background-color 0.3s ease, transform 0.3s ease;
     align-self: center;
 }
-
 .send-btn:hover {
     background-color: rgba(0, 0, 0, 0.788);
     transform: translateY(-3px);
@@ -371,8 +354,6 @@ header .nav-bar {
 .send-btn:active {
     transform: translateY(0);
 }
-
-/* Animation for the Form */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -383,9 +364,35 @@ header .nav-bar {
         transform: translateY(0);
     }
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
+/***********************footer***************************************/
+footer {
+    background-color: rgba(0, 0, 0, 0.952);
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+}
+.footer-about h3 {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    color: lightgrey;
+}
+.footer-about p {
+    margin: 5px 0;
+}
+.footer-bottom {
+    border-top: 1px solid #555;
+    padding-top: 20px;
+    color: lightgrey;
+}
+.footer-link {
+    color: white;
+    text-decoration: none;
+}
+.footer-link:hover {
+    color: rgba(0, 255, 242, 0.342);
+}
+/****************mediaquery**********************/
+@media screen and (max-width: 768px) {
     .contact-wrapper {
         grid-template-columns: 1fr;
     }
@@ -407,26 +414,24 @@ header .nav-bar {
     }
 }
 
-@media (max-width: 495px) {
+@media screen and (max-width: 495px) {
     .contact-form input,
     .contact-form textarea {
         width: 90%;
         margin: 0 auto;
     }
-    
     .send-btn {
         width: 180px;
     }
 }
 
-@media (max-width: 420px) {
+@media screen and (max-width: 420px) {
   .contact-info {
     font-size: 1rem;
     }
-   
-    
+
 }
-@media (max-width: 350px) {
+@media screen and (max-width: 350px) {
     .contact-info {
       font-size: 0.90rem;
       }
@@ -437,27 +442,4 @@ header .nav-bar {
           font-size: 1rem;
       }
       
-  }
-/***********************footer***************************************/
-footer {
-    background-color: rgba(0, 0, 0, 0.952);
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-  }
-  
-  .footer-about h3 {
-    font-size: 1.25rem;
-    margin-bottom: 20px;
-    color: lightgrey;
-  }
-  
-  .footer-about p {
-    margin: 5px 0;
-  }
-  
-  .footer-bottom {
-    border-top: 1px solid #555;
-    padding-top: 20px;
-    color: lightgrey;
   }

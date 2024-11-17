@@ -11,7 +11,7 @@ header, .hero-section {
     background-size: cover; 
     background-attachment: fixed; 
 }
-/* HEADER */
+/*****************************************header****************************/
 header {
     padding: 15px;
     display: flex;
@@ -44,19 +44,19 @@ header .nav-bar {
     width: 100%;
 }
 .logo {
-    font-size: 1rem; /* Adjust font size if necessary */
+    font-size: 1rem; 
     display: flex;
-    align-items: center; /* Center the logo vertically */
-    justify-content: center; /* Center the logo horizontally */
+    align-items: center; 
+    justify-content: center;
 }
 
 .logo img {
-    max-width: 100%; /* Ensures the logo fits within its container */
-    max-height: 70px;  /* Controls image height */
-    width: auto; /* Maintain aspect ratio */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Optional, remove if no rounded corners needed */
-    background-color: transparent; /* Ensures no background color */
+    max-width: 100%; 
+    max-height: 70px; 
+    width: auto; 
+    height: auto; 
+    border-radius: 5px; 
+    background-color: transparent; 
 }
 /***********Navbar**************/
 .nav-bar ul{
@@ -82,7 +82,7 @@ header .nav-bar {
     cursor: pointer;
     margin-right: 30px;
 }
-/* Contact Button */
+/******************************Contact Button***************/
 .contact-btn {
     background-color: rgba(0, 0, 0, 0.952);
     color: black;
@@ -99,10 +99,10 @@ header .nav-bar {
     background-color: rgba(0, 0, 0, 0.822);
     color: whitesmoke;
 }
-/* Mobile Menu */
+/********************************Mobile Menu*********************************************/
 .mobile-menu {
     display: none;
-    background-color: white; /* Mobile menu background */
+    background-color: white; 
     position: fixed;
     top: 0;
     left: 0;
@@ -115,20 +115,20 @@ header .nav-bar {
     padding: 20px;
     margin-top: 105px;
     height: 50vh;
-    text-align: center; /* Center the text in the mobile menu */
+    text-align: center;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     box-shadow: 7px 4px 10px rgba(0, 0, 0, 0.342);
 }
 .mobile-menu.open {
-    display: flex; /* Show mobile menu */
+    display: flex; 
 }
 .mobile-menu nav ul {
     list-style: none;
     padding: 0;
 }
 .mobile-menu nav ul li {
-    margin: 20px 0; /* Add space between each link */
+    margin: 20px 0; 
 }
 .mobile-menu nav ul li a {
     color: black;
@@ -140,10 +140,9 @@ header .nav-bar {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    margin-top: 30px; /* Adds spacing above the contact button */
+    margin-top: 30px;
 }
 
-/* Menu Item Animations */
 @keyframes slideIn {
     0% {
         transform: translateX(-100%);
@@ -231,7 +230,7 @@ header .nav-bar {
     display: block;
 }
 .dropdown-menu li {
-    text-align: center; /* Center text inside each dropdown item */
+    text-align: center;
 }
 .dropdown-menu li a {
     color: white;
@@ -289,48 +288,47 @@ h1 {
 form {
     display: flex; 
     flex-wrap: wrap;
-    gap: 30px; /* Adds spacing between columns */
+    gap: 30px;
     justify-content: center;
 }
 .form-grid {
     display: flex;
     gap: 10px;
-    width: 100%;/**90**/
+    width: 100%;
     justify-content: center;
 }
 .file-upload-section {
     display: grid;
     gap: 25px;
-    grid-template-columns: repeat(3, 1fr); /* Default: 5 columns */
+    grid-template-columns: repeat(3, 1fr); 
     width: 100%;
     margin-top: 30px;
-    justify-items: center; /* Center items in each grid cell */
+    justify-items: center; 
 }
 .upload-guide {
-    font-size: 16px; /* Adjust font size */
-    color: white; /* Slightly darker text for clarity */
+    font-size: 16px; 
+    color: white; 
     font-weight:bolder;
-    text-align: center; /* Center the sentence */
-    margin-bottom: -40px; /* Space between the guide sentence and the upload section */
-    width: 100%; /* Optional: Set a max width to avoid very long lines */
+    text-align: center; 
+    margin-bottom: -40px; 
+    width: 100%; 
     margin-left: auto;
-    margin-right: auto; /* Center horizontally */
+    margin-right: auto; 
 }
-
 .file-upload-item {
     width: 100%;
     max-width: 150px;
-    height: 150px; /* Ensures square container */
+    height: 150px; 
     position: relative;
     display: flex;
-    flex-direction: column; /* Ensure label is placed above the input */
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Align content to the top */
-    border: 2px dashed lightgray; /* Dashed border for upload visual */
+    justify-content: flex-start;
+    border: 2px dashed lightgray;
     border-radius: 5px;
-    overflow: hidden; /* Hide image overflow */
+    overflow: hidden; 
     cursor: pointer;
-    background-color: #f9f9f92d; /* Light background for contrast */
+    background-color: #f9f9f92d;
 }
 .file-upload-item label {
     margin-bottom: 10px;
@@ -338,37 +336,33 @@ form {
     color: rgba(0, 0, 0, 0.726);
     text-align: center;
 }
-/* File input styling */
 .file-upload-item input[type="file"] {
     width: 100%;
     height: 100%;
-    opacity: 0; /* Hide default input */
-    position: absolute; /* Place it over the container */
+    opacity: 0; 
+    position: absolute;
     cursor: pointer;
 }
-/* Hide the default "Choose file" text and position the icon */
 .file-upload-item input[type="file"]::-webkit-file-upload-button {
     display: none;
 }
 .file-upload-item .upload-icon {
     position: absolute;
-    top: 50%; /* Center the icon */
+    top: 50%; 
     left: 50%;
     transform: translate(-50%, -50%);
     color: rgba(0, 0, 0, 0.726);
     font-size: 24px;
-    pointer-events: none; /* Allow clicks to reach the file input */
+    pointer-events: none;
 }
-
-/*esssai*/
 .file-upload-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure the image covers the area */
+    object-fit: cover; 
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1; /* Ensure image stays above icon but below new uploads */
+    z-index: 1; 
 }
 input[type="text"], 
 input[type="email"], 
@@ -378,17 +372,14 @@ input[type="tel"],
 input[type="url"], 
 input[type="date"], 
 select {
-    background-color: #f9f9f9bb; /* Light, semi-transparent background */
-    padding: 10px; /* Adjust padding if needed */
-    border-radius: 5px; /* Keep the border radius consistent with other elements */
-    border: 1px solid #ccc; /* Border color for input fields */
+    background-color: #f9f9f9bb;
+    padding: 10px; 
+    border-radius: 5px; 
+    border: 1px solid #ccc; 
     outline: none;
-    width: 90%; /* Ensure inputs are full width */
-    margin-bottom: 15px; /* Space between input fields */
-     /* Add space below inputs */
+    width: 90%; 
+    margin-bottom: 15px; 
 }
-
-/* File input specific styling */
 .file-upload-section input[type="file"] {
     opacity: 0;
     position: absolute;
@@ -403,25 +394,21 @@ select {
     align-items: center;
     flex-direction: column;
 }
-
 input[type="file"], 
 .submit-btn {
     flex: 1 1 100%; /* Ensure these elements span full width */
 }
-
 label{
     margin-bottom: 5px;
     font-weight: bold;
     color: white;
 }
-
 input, select{
    padding: 10px;
     border-radius: 5px;
     border: none;
     width: 95%;
 }
-
 .submit-btn {
     background-color: rgba(0, 0, 0, 0.952);
     color: white;
@@ -429,14 +416,12 @@ input, select{
     cursor: pointer;
     transition: background 0.3s ease;
     padding: 15px 30px;
-    width: 100%; /* Full width button */
-    max-width: 300px; /* Optional: Set max width */
+    width: 100%; 
+    max-width: 300px;
     text-align: center;
     border: none;
     border-radius: 5px;
 }
-
-
 .submit-btn:hover {
     background-color: rgba(0, 0, 0, 0.822);
 }
@@ -449,13 +434,7 @@ input, select{
     justify-content: center; /* Center the submit button */
     width: 100%;
 } 
-/*******************mediaquery form************************/
 
-@media (max-width: 768px) {
-    .form-grid {
-        flex-direction: column;
-    }
-}
 /* Contact Button: Adjust position */
 .contact-btn {
     padding: 10px 10px;
@@ -467,47 +446,54 @@ input, select{
     z-index: 2;
     border-radius: 5px;
 }
-/***************files upload media query****************/
-@media (max-width: 1024px) {
-    .file-upload-section {
-        grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
-    }
-}
-
-@media (max-width: 768px) {
-    .file-upload-section {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .file-upload-section {
-        grid-template-columns: repeat(1, 1fr); /* 1 column on very small screens */
-    }
-}
-/*footer*/
+/***************************************footer***************************/
 footer {
     background-color: rgba(0, 0, 0, 0.952);
     color: white;
     padding: 15px 20px;
     text-align: center;
-  }
-  
-  .footer-about h3 {
+}
+.footer-about h3 {
     font-size: 1.25rem;
     margin-bottom: 20px;
     color: lightgrey;
-  }
-  
-  .footer-about p {
+}
+.footer-about p {
     margin: 5px 0;
-  }
-  
-  .footer-bottom {
+}
+.footer-bottom {
     border-top: 1px solid #555;
     padding-top: 20px;
     color: lightgrey;
-  }
-  /*****************************language selector********************************/
+}
+.footer-link {
+    color: white;
+    text-decoration: none;
+}
+.footer-link:hover {
+    color: rgba(0, 255, 242, 0.342);
+}
+/***************media query****************/
+@media screen and (max-width: 1024px) {
+    .file-upload-section {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .form-grid {
+        flex-direction: column;
+    }
+    .file-upload-section {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .file-upload-section {
+        grid-template-columns: repeat(1, 1fr); /* 1 column on very small screens */
+    }
+}
+
  
 
