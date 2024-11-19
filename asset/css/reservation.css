@@ -307,7 +307,7 @@ header .nav-bar {
     bottom: 1%;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: white;
     background: rgba(0, 0, 0, 0.644);
     padding: 10px 20px;
@@ -387,4 +387,17 @@ footer {
 }
 .footer-link:hover {
     color: rgba(0, 255, 242, 0.342);
+}
+/*******************Media query*****************************/
+@media screen and (max-width: 545px){
+    .hero-image h1 {
+        font-size: 1rem;
+       
+    }
+}
+@media screen and (max-width: 364px){
+    .hero-image h1 {
+        font-size: 0.7rem;
+       
+    }
 }
