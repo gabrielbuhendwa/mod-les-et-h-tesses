@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <title>Connexion</title>
-    <link rel="stylesheet" href="/asset/css/connexions.css">
+    <link rel="stylesheet" href="/asset/css/reservation.css" />
+    <title>Reservation</title>
 </head>
 <body>
     <header>
@@ -29,9 +28,9 @@
                     </li>
                 </ul>
             </nav>
-          <a href="/pages/contact_us.html">
-              <button class="contact-btn">Contactez Nous</button>
-          </a>      
+            <a href="/pages/contact_us.html">
+                <button class="contact-btn">Contactez Nous</button>
+            </a>
             <div class="menu-toggle">
                 <i class="fa-solid fa-bars"></i>
             </div>
@@ -39,13 +38,13 @@
     </header>
     <!-- Mobile Menu -->
     <div class="mobile-menu">
-    
         <nav>
             <ul>
                 <li><a href="/index.html">Acceuil</a></li>
-                <li><a href="/pages/about_us.html">À Propos</a></li>
+                <li><a href="#">À Propos</a></li>
                 <li><a href="/pages/services.html">Services</a></li>
                 <li><a href="/pages/gallerie.html">Galerie</a></li>
+                <li><a href="#">Actualités</a></li>
                 <li class="dropdown">
                     <a href="#">S'inscrire</a>
                     <ul class="dropdown-menu">
@@ -56,25 +55,40 @@
             </ul>
         </nav>
         <a href="/pages/contact_us.html">
-          <button class="contact-btn">Contactez Nous</button>
+            <button class="contact-btn">Contactez Nous</button>
         </a>
     </div>
     <section class="hero-section">
-        <div class="contact-section">
-            <div class="contact-form">
-                <h2>Connexion</h2>
-                <p id="error-message" style="color: red; font-size: 0.9rem; display: none;"></p> <!-- Error message display -->
-                <form id="loginForm" action="#" method="POST">
-                    <input type="email" id="email" name="email" placeholder="Email" required>
-                    <input type="password" id="password" name="password" placeholder="Mot de passe" required>
-                   
-                    <button type="submit" class="send-btn">Se connecter</button>
-                </form>
-                <p><a href="/pages/forget_paword.html" class="link">Mot de passe oublié ?</a></p>
-                <p>Nouveau ici ? <a href="signup.html" class="link">Créer un compte</a></p>
+        <section class="hero-section-img">
+        <div class="hero-image">
+            <img src="/asset/images/pima.webp" alt="Hero Image">
+            <h1>Gabriella Kinja</h1>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <div class="image-row">
+            <div class="image-card">
+                <img src="/asset/images/img5.jpeg" alt="Image 1">
+            </div>
+            <div class="image-card">
+                <img src="/asset/images/img10.jpeg" alt="Image 2">
             </div>
         </div>
-    </section>      
+        <div class="image-row">
+            <div class="image-card">
+                <img src="/asset/images/img15.jpeg" alt="Image 3">
+            </div>
+            <div class="image-card">
+                <img src="/asset/images/img7.jpeg" alt="Image 4">
+            </div>
+        </div>
+    </section>
+
+    <div class="reservation-button">
+        <button>Réserver celle-ci</button>
+    </div>
+    </section>
     <footer>
         <div class="footer-about">
             <h3>Faites briller vos événements avec nos modèles et hôtesses !</h3>
@@ -83,10 +97,9 @@
         <div class="footer-bottom">
             <p>&copy; 2024 GENERAL CONSULTING GROUP. Tous droits réservés.</p>
             <p>Développé par SoftCreatix</p>
-            <p><a href="policy.html" class="footer-link">Conditions d'utilisation et Politique de confidentialité</a></p>
+            <p><a href="/pages/policy.html" class="footer-link">Conditions d'utilisation et Politique de confidentialité</a></p>
         </div>
     </footer>
-    
 </body>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -104,28 +117,4 @@
       });
   });
  </script>
- <!-----------login logic----------->
- <script>
-    document.getElementById("loginForm").addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent form submission
-
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
-        const errorMessage = document.getElementById("error-message");
-
-        if (email === "patrick@gmail.com" && password === "1234") {
-            window.location.href = "modèle&hôtesse.html"; // Redirect on success
-        } else {
-            errorMessage.style.display = "block"; // Show error message
-            if (email !== "patrick@gmail.com" && password !== "1234") {
-                errorMessage.textContent = "Mot de passe ou adresse email incorrect.";
-            } else if (email !== "patrick@gmail.com") {
-                errorMessage.textContent = "Mauvais email.";
-            } else if (password !== "1234") {
-                errorMessage.textContent = "Mot de passe incorrect.";
-            }
-        }
-    });
-</script>
-
 </html>
