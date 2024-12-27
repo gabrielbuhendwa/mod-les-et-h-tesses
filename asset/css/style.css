@@ -6,7 +6,7 @@ body, ul{
     font-family: "Karla", sans-serif;
 }
 header, .hero-section {
-    background: url('/asset/images/background.jpg') no-repeat center center; 
+    background: url('../images/background.jpg') no-repeat center center; 
     background-size: cover; 
     background-attachment: fixed; 
 }
@@ -102,20 +102,18 @@ header .nav-bar {
 /*******************************Mobile Menu**********************/
 .mobile-menu {
     display: none;
-    background-color: white;
+    background-color: whitesmoke;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: 1001;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+    
     margin-top: 105px;
-    height: 50vh;
-    text-align: center;
+    height: 70vh;
+    text-align: left;
+    padding-left: 30px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     box-shadow: 7px 4px 10px rgba(0, 0, 0, 0.342);
@@ -142,6 +140,106 @@ header .nav-bar {
     cursor: pointer;
     margin-top: 30px;
 }
+/*********************profile cercle mobile************************************************************/
+.profile-circle-menu {
+    position: absolute;
+    right: 5px; /* Adjusted to align near the menu toggle */
+    top: 10px; /* Ensure it aligns properly in the mobile header */
+    cursor: pointer;
+    display: none; /* Hidden by default for larger screens */
+    top: 5px;
+
+}
+.profile-circle-menu img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.678);
+    margin-right: 50px;
+    object-fit: cover;
+}
+/*************************************icon menu**********************************************/
+.profile-circle-menu i {
+    font-size: 40px; /* Similar size to the profile picture */
+    color: rgba(0, 0, 0, 0.678);
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.678);
+}
+.profile-circle i {
+    font-size: 23px; /* Similar size to the profile picture */
+    color: whitesmoke;   
+    display: block;
+    width: 43px;
+    height: 43px;
+    line-height: 43px;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid whitesmoke;
+    margin-right: 50px;
+}
+
+@media screen and (max-width: 1014px) {
+    .profile-circle {
+        display: none; /* Hide for mobile */
+    }
+    .profile-circle-menu {
+        display: block; /* Show only in mobile view */
+    }
+}
+
+/* Dropdown Styles */
+.profile-dropdown-menu {
+    position: absolute;
+    top: 55px; /* Positioned below the profile circle */
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.938);
+    border-radius: 5px;
+    list-style: none;
+    padding: 10px 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s ease, opacity 0.3s ease;
+    text-align: center;
+    width: 150px;
+    z-index: 10;
+}
+
+.profile-circle-menu:hover .profile-dropdown-menu,
+.profile-circle-menu:focus-within .profile-dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+   
+}
+
+/* Dropdown Animation */
+.profile-dropdown-menu li {
+    animation: fadeIn 0.3s ease-out forwards;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-dropdown-menu li a {
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    display: block;
+}
+.profile-dropdown-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
 /**********************Menu Item Animations*****************************/
 @keyframes slideIn {
     0% {
@@ -164,9 +262,12 @@ header .nav-bar {
 .mobile-menu ul li:nth-child(6) { animation-delay: 0.5s; }
 .mobile-menu ul li:nth-child(7) { animation-delay: 0.6s; }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1014px) {
     .nav-bar ul{
         display: none;
+    }
+    .profile-circle{
+      display: none;
     }
     .menu-toggle{
         display: block;
@@ -201,7 +302,9 @@ header .nav-bar {
         top: 50px; 
         left: 50%;
         transform: translateX(-50%);
-    }
+        min-width: 20px;
+    }    
+   
 }
 .dropdown {
     position: relative; 
@@ -212,7 +315,7 @@ header .nav-bar {
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.938);
     padding: 10px 0;
     border-radius: 5px;
     visibility: hidden;
@@ -243,10 +346,100 @@ header .nav-bar {
 .dropdown-menu li a:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
-/******************Hide the contact button when hovering over the dropdown*************/
-.dropdown:hover ~ .contact-btn {
-    display: none;
+/*******************profile and lagnauges**********************/
+.profile-circle {
+    position: relative;
+    margin-left: 15px;
+    cursor: pointer;
 }
+.profile-circle img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-right: 50px;
+    object-fit: cover;
+}
+.profile-dropdown {
+    position: absolute;
+    top: 50px; /* Adjusted for mobile view alignment */
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.938);
+    border-radius: 5px;
+    list-style: none;
+    padding: 10px 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s ease, opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    text-align: center;
+    z-index: 10; /* Ensure it appears above other elements */
+}
+
+/* Hover and focus states */
+.profile-circle:hover .profile-dropdown,
+.profile-circle:focus-within .profile-dropdown {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Dropdown items */
+.profile-dropdown li a {
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    display: block;
+}
+.profile-dropdown li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/************************* Dropdown Animation ********************/
+.profile-dropdown li {
+    animation: fadeIn 0.3s ease-out forwards;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/************Language Selector*********************/
+.language-selector select {
+    border: none;
+    padding: 3px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #fff;
+    color: black;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: -10px;
+}
+.language-selector select:hover {
+    background-color: #f1f1f1;
+}
+/***************Mobile Menu Language Selector in phone*****************/
+.language-selector {
+    justify-content: center;
+    align-items: center;
+
+  
+}
+.language-selector select {
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+}
+
 /*************************end of header mobile version and desktop***********************************/
 .order-btn {
     padding: 12px 25px;
@@ -273,7 +466,7 @@ header .nav-bar {
     padding: 40px 20px; 
     position: relative; 
     z-index: 1; 
-    height: 130vh;
+    height: 135vh;
 }
 .hero-section::before {
     content: '';
@@ -346,30 +539,7 @@ section {
     opacity: 1;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
-.inspiration:hover {
-    background-image: url('/asset/images/backg.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-}
-.inspiration:hover::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.623); 
-    filter: blur(4px);
-    z-index: 1; 
-}
-.inspiration:hover h2,
-.inspiration:hover p {
-    position: relative;
-    z-index: 2; 
-    transform: translateY(-10px);
-    color: #fff; 
-}
+
 /***************image slider****************************************/
 .image-slider {
     position: relative;
@@ -493,7 +663,7 @@ section {
     line-height: 1.6;
     font-size: 0.95rem;
 }
-/******************************partener***********************************/
+/******************************partners***********************************/
 .partners {
     padding: 4rem 2rem;
     background-color: #ffffff;
@@ -636,9 +806,21 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+@media screen and (max-width: 433px){
+    .hero-section {
+        height: 170vh;
+    }
+    .image-slider {
+        width: 35%;
+        margin-top: 18px;
+    }
+    .hero-content p {
+        font-size: 1.125rem;
+    }
+}
 @media screen and (max-width: 400px){
     .hero-section {
-        height: 160vh;
+        height: 180vh;
     }
     .image-slider {
         width: 35%;
@@ -650,7 +832,17 @@ footer {
 }
 @media screen and (max-width: 346px){
     .hero-section {
-        height: 180vh;
+        height: 200vh;
+    }
+    .image-slider {
+        width: 35%;
+        margin-top: 15px;
+    }
+    
+}
+@media screen and (max-width: 320px){
+    .hero-section {
+        height: 210vh;
     }
     .image-slider {
         width: 35%;
@@ -660,7 +852,7 @@ footer {
 }
 @media screen and (max-width: 300px){
     .hero-section {
-        height: 200vh;
+        height: 230vh;
     } 
 }
 
