@@ -1,5 +1,21 @@
 <?php 
     require('../controllers/our_modelsController.php');
+
+    //admin security
+    session_start();
+
+    // Check if user is authenticated
+    if (!isset($_SESSION['id'])) {
+        header('Location: ../pages/login.php');
+        exit;
+    }
+
+    // Check if user is an admin
+    if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
+        // Redirect to an error page or deny access
+        header('Location: ../index.php'); 
+        exit;
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 27, 2024 at 08:15 PM
+-- Generation Time: Dec 28, 2024 at 11:43 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -194,6 +194,14 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `profile_picture`, `telephone`, `address`, `password`, `account_activation_hash`, `reset_token_hash`, `reset_token_expires_at`, `role`) VALUES
+(11, 'Buhendwa', 'Gabriel', 'gabrielbuhendwa400@gmail.com', 'images.png', '+250791348977', 'Kigali (Rwanda)', '$2y$10$cEWoA7RDMiWDsCj3RZbMqODdat5xM8DhRf3GyO2BajlbjbG/vNH6i', NULL, NULL, NULL, 'admin'),
+(12, 'Ndayisaba', 'Gloire', 'carlosjeune741@gmail.com', 'images.png', '+250791348977', 'Goma', '$2y$10$t9WZljqcu9ISfvnWbo7kReaJLz079fEGyzdYK5XyE5X6f6K8XqkBC', NULL, NULL, NULL, 'user');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -273,7 +281,7 @@ ALTER TABLE `partners`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
