@@ -186,7 +186,7 @@
             
         </div>
         <p class="upload-guide">
-        Pour finaliser votre inscription, merci de fournir une pièce d’identité (carte nationale ou permis de conduire) ainsi que 5 photos naturelles (sans maquillage ni filtre) : portrait face, portrait profil, corps entier (face et profil), une photo en mouvement et une en maillot de bain.
+        Pour finaliser votre inscription, merci de fournir une pièce d’identité (carte nationale ou permis de conduire) ainsi que 5 photos naturelles (sans maquillage ni filtre) : portrait face, portrait profil, corps entier (face et profil), et une photo en mouvement.
             </p>
             <div class="file-upload-section">
                 <div class="file-upload-item">
@@ -228,15 +228,6 @@
                         <i class="fa-solid fa-upload"></i>
                     </div>
                 </div>
-
-                <div class="file-upload-item">
-                    <label for="close-up">Photo en tenue de bain</label>
-                    <input type="file" id="close-up" name="Bathsuit" accept="image/*">
-                    <div class="upload-icon">
-                        <i class="fa-solid fa-upload"></i>
-                    </div>
-                </div>
-                
             </div>
             <button type="submit" name="submit" class="submit-btn">Soumettre l'inscription</button>
         </form>

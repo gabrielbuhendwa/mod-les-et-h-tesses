@@ -79,9 +79,6 @@
         <div class="image-card">
             <img src="../asset/images/models/<?= htmlspecialchars($request_details['action_shot']) ?>" alt="Action Shot">
         </div>
-        <div class="image-card">
-            <img src="../asset/images/models/<?= htmlspecialchars($request_details['swimwear_photo']) ?>" alt="Swimwear Photo">
-        </div>
     </div>
 
     <div class="action-buttons">

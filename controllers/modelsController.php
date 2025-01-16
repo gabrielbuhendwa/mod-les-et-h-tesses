@@ -32,7 +32,6 @@ if (isset($_POST['submit'])) {
     $portraitProfile = $_FILES['profil']['name'] ?? '';
     $fullBody = $_FILES['front']['name'] ?? '';
     $actionPhoto = $_FILES['action']['name'] ?? '';
-    $bathSuit = $_FILES['Bathsuit']['name'] ?? '';
     
     //for the day user send the request 
     $request_date = date('Y-m-d H:i:s');
@@ -129,25 +128,14 @@ if (isset($_POST['submit'])) {
                                                                                                             if ($result) {
                                                                                                                 $actionPhoto = $uniqueName;
 
-                                                                                                                // Process Bath Suit Photo
-                                                                                                                if (isset($_FILES['Bathsuit']) && !empty($_FILES['Bathsuit']['name'])) {
-                                                                                                                    if ($_FILES['Bathsuit']['size'] <= $sizeMax) {
-                                                                                                                        $extensionUpload = strtolower(pathinfo($_FILES['Bathsuit']['name'], PATHINFO_EXTENSION));
-                                                                                                                        if (in_array($extensionUpload, $validExtensions)) {
-                                                                                                                            $uniqueName = uniqid() . '.' . $extensionUpload;
-                                                                                                                            $destination = __DIR__ . "/../asset/images/models/" . $uniqueName;
-                                                                                                                            $result = move_uploaded_file($_FILES['Bathsuit']['tmp_name'], $destination);
-                                                                                                                            if ($result) {
-                                                                                                                                $bathSuit = $uniqueName;
-
                                                                                                                                 // All uploads are successful
-                                                                                                                                // Assuming the connection is already established as you provided
+                                                            
                                                                                                                                 try {
                                                                                                                                     // Prepare the SQL INSERT query
                                                                                                                                     $insert_models = $bdd->prepare('INSERT INTO models_request (
                                                                                                                                          gender, first_name, last_name, birth_date, city, code_number, nationality, phone, whatsapp, email, instagram, height, languages,
-                                                                                                                                        hair, eye, shoes_size, id_card, face_portrait, profile_portrait, full_body_front_side, action_shot, swimwear_photo, request_date
-                                                                                                                                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
+                                                                                                                                        hair, eye, shoes_size, id_card, face_portrait, profile_portrait, full_body_front_side, action_shot, request_date
+                                                                                                                                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
 
                                                                                                                                     // Format the birth date as "day/month/year"
                                                                                                                                     $birth_date = isset($birthDay) && isset($birthMonth) && isset($birthYear) ? "{$birthDay}/{$birthMonth}/{$birthYear}" : null;
@@ -178,7 +166,6 @@ if (isset($_POST['submit'])) {
                                                                                                                                         $portraitProfile,
                                                                                                                                         $fullBody,
                                                                                                                                         $actionPhoto,
-                                                                                                                                        $bathSuit,
                                                                                                                                         $request_date
                                                                                                                                     ];
 
@@ -197,19 +184,6 @@ if (isset($_POST['submit'])) {
                                                                                                                                     die('Error: ' . $e->getMessage());
                                                                                                                                 }
                                                                                                                                                                             
-                                                                                                                            } else {
-                                                                                                                                $error = "Erreur lors de l'importation de la photo en tenue de bain.";
-                                                                                                                            }
-                                                                                                                        } else {
-                                                                                                                            $error = "La photo en tenue de bain doit être au format jpg, jpeg, gif, png ou webp.";
-                                                                                                                        }
-                                                                                                                    } else {
-                                                                                                                        $error = "La photo en tenue de bain doit être inférieure à 4 Mo.";
-                                                                                                                    }
-                                                                                                                } else {
-                                                                                                                    $error = "Veuillez fournir une photo en tenue de bain.";
-                                                                                                                }
-
                                                                                                             } else {
                                                                                                                 $error = "Erreur lors de l'importation de la photo en mouvement.";
                                                                                                             }

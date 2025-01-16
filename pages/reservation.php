@@ -40,9 +40,6 @@
             <div class="image-card">
                 <img src="../asset/images/models/<?php echo htmlspecialchars($details['action_shot']); ?>" alt="Action Shot">
             </div>
-            <div class="image-card">
-                <img src="../asset/images/models/<?php echo htmlspecialchars($details['swimwear_photo']); ?>" alt="Swimwear Photo">
-            </div>
         </div>
         <div class="reservation-button">
             <button onclick="document.getElementById('reservationModal').style.display='flex'">Réserver celle-ci</button>

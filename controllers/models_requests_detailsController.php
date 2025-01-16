@@ -1,5 +1,4 @@
 <?php
-session_start();
 require('../database/db.php');
 require('mailer.php');
 
@@ -36,14 +35,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['validate'])) {
                 first_name, last_name, birth_date, city, code_number,
                 nationality, phone, whatsapp, email, instagram, height,
                 languages, hair, eye, shoes_size, face_portrait, 
-                profile_portrait, full_body_front_side, action_shot, 
-                swimwear_photo, approval_date
+                profile_portrait, full_body_front_side, action_shot, approval_date
             ) VALUES (
                 :first_name, :last_name, :birth_date, :city, :code_number,
                 :nationality, :phone, :whatsapp, :email, :instagram, :height,
                 :languages, :hair, :eye, :shoes_size, :face_portrait, 
-                :profile_portrait, :full_body_front_side, :action_shot, 
-                :swimwear_photo, NOW()
+                :profile_portrait, :full_body_front_side, :action_shot, NOW()
             )
         ");
 
@@ -67,8 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['validate'])) {
             ':face_portrait' => $request_details['face_portrait'],
             ':profile_portrait' => $request_details['profile_portrait'],
             ':full_body_front_side' => $request_details['full_body_front_side'],
-            ':action_shot' => $request_details['action_shot'],
-            ':swimwear_photo' => $request_details['swimwear_photo']
+            ':action_shot' => $request_details['action_shot']
         ]);
 
         // Delete the request from `models_request`

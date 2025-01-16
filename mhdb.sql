@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 28, 2024 at 11:43 AM
+-- Generation Time: Jan 16, 2025 at 05:24 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -49,7 +49,6 @@ CREATE TABLE `hostesses` (
   `profile_portrait` varchar(255) NOT NULL,
   `full_body_front_side` varchar(255) NOT NULL,
   `action_shot` varchar(255) NOT NULL,
-  `swimwear_photo` varchar(255) NOT NULL,
   `approval_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -82,7 +81,6 @@ CREATE TABLE `hostesses_requests` (
   `profile_portrait` varchar(255) NOT NULL,
   `full_body_front_side` varchar(255) NOT NULL,
   `action_shot` varchar(255) NOT NULL,
-  `swimwear_photo` varchar(255) NOT NULL,
   `request_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -114,7 +112,6 @@ CREATE TABLE `models` (
   `profile_portrait` varchar(255) NOT NULL,
   `full_body_front_side` varchar(255) NOT NULL,
   `action_shot` varchar(255) NOT NULL,
-  `swimwear_photo` varchar(255) NOT NULL,
   `approval_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -147,7 +144,6 @@ CREATE TABLE `models_request` (
   `profile_portrait` varchar(255) NOT NULL,
   `full_body_front_side` varchar(255) NOT NULL,
   `action_shot` varchar(255) NOT NULL,
-  `swimwear_photo` varchar(255) NOT NULL,
   `request_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -257,19 +253,19 @@ ALTER TABLE `hostesses`
 -- AUTO_INCREMENT for table `hostesses_requests`
 --
 ALTER TABLE `hostesses_requests`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `models`
 --
 ALTER TABLE `models`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `models_request`
 --
 ALTER TABLE `models_request`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `partners`
